@@ -1,3 +1,3 @@
 MyCocosProject01
 ================
-チュートリアル
+tutorial!
