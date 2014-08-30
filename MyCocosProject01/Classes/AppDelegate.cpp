@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "AppMacros.h"
+#include "common/GameTitleScene.h"
 
 USING_NS_CC;
 
@@ -20,14 +21,39 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-    // turn on display FPS
+
+	// デザインサイズの指定
+	director->getOpenGLView()->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::SHOW_ALL);
+
+	// リソースのマルチリゾリューション対応
+	// iPad用リソース
+	if (glview->getFrameSize().height > mediumResource.size.height)
+	{
+		director->setContentScaleFactor(largeResource.size.height / designResolutionSize.height);
+		FileUtils::getInstance()->addSearchPath(mediumResource.directory);
+	}
+	// iPhoneHD用リソース
+	else if (glview->getFrameSize().height > smallResource.size.height)
+	{
+		director->setContentScaleFactor(mediumResource.size.height / designResolutionSize.height);
+		FileUtils::getInstance()->addSearchPath(mediumResource.directory);
+	}
+	// iPhone用リソース
+	else
+	{
+		director->setContentScaleFactor(smallResource.size.height / designResolutionSize.height);
+		FileUtils::getInstance()->addSearchPath(smallResource.directory);
+	}
+
+
+	// turn on display FPS
     director->setDisplayStats(true);
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = GameTitleScene::createScene();
 
     // run
     director->runWithScene(scene);
