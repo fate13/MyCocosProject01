@@ -1,7 +1,6 @@
 ./obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/common/GameTitleScene.o: \
   jni/../../Classes/common/GameTitleScene.cpp \
-  jni/../../Classes/common/GameTitleScene.h \
-  jni/../../cocos2d/cocos/./cocos2d.h \
+  jni/../../Classes/AppMacros.h jni/../../cocos2d/cocos/./cocos2d.h \
   jni/../../cocos2d/cocos/./base/ccConfig.h \
   jni/../../cocos2d/cocos/./base/CCPlatformConfig.h \
   jni/../../cocos2d/cocos/./base/CCRef.h \
@@ -315,9 +314,10 @@
   jni/../../cocos2d/cocos/./deprecated/CCDouble.h \
   jni/../../cocos2d/cocos/./deprecated/CCBool.h \
   jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h \
-  jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h
+  jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h \
+  jni/../../Classes/common/GameTitleScene.h
 
-jni/../../Classes/common/GameTitleScene.h:
+jni/../../Classes/AppMacros.h:
 
 jni/../../cocos2d/cocos/./cocos2d.h:
 
@@ -948,3 +948,5 @@ jni/../../cocos2d/cocos/./deprecated/CCBool.h:
 jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h:
 
 jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h:
+
+jni/../../Classes/common/GameTitleScene.h:
