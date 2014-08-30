@@ -6,6 +6,7 @@
 //
 //
 
+#include "AppMacros.h"
 #include "GameTitleScene.h"
 
 Scene* GameTitleScene::createScene()
@@ -25,5 +26,15 @@ bool GameTitleScene::init()
 		return false;
 	}
 
+	createBG();
+
 	return true;
+}
+
+void GameTitleScene::createBG()
+{
+	Sprite* bg = Sprite::create("testBG.png");
+	bg->setPosition(WIN_CENTER);
+
+	this->addChild(bg);
 }

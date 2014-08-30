@@ -15,6 +15,10 @@ USING_NS_CC;
 
 class GameTitleScene : public Layer
 {
+private:
+
+	void createBG();
+
 public:
 	// there's no 'id' in cpp, so we recommend returning the class instance pointer
     static Scene* createScene();
