@@ -25,4 +25,6 @@ static cocos2d::Size designResolutionSize = cocos2d::Size(640, 1136);
 
 #define FONT_SIZE(__SIZE) (cocos2d::Director::getInstance()->getOpenGLView()->getDesignResolutionSize().width / mediumResource.size.width * __SIZE)
 
+#define WIN_CENTER cocos2d::Vec2(cocos2d::Director::getInstance()->getWinSize().width / 2, cocos2d::Director::getInstance()->getWinSize().height / 2)
+
 #endif

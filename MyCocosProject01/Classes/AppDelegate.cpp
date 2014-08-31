@@ -30,7 +30,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	if (glview->getFrameSize().height > mediumResource.size.height)
 	{
 		director->setContentScaleFactor(largeResource.size.height / designResolutionSize.height);
-		FileUtils::getInstance()->addSearchPath(mediumResource.directory);
+		FileUtils::getInstance()->addSearchPath(largeResource.directory);
 	}
 	// iPhoneHD用リソース
 	else if (glview->getFrameSize().height > smallResource.size.height)
