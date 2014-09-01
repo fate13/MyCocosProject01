@@ -20,6 +20,7 @@
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdint.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+  /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_wchar_limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/limits.h \
@@ -70,8 +71,6 @@
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/initializer_list \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/tuple \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstring \
-  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert \
-  /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/atomic \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__undef_min_max \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/system_error \
@@ -114,6 +113,8 @@
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/alloca.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/strings.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h \
+  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert \
+  /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h \
   jni/../../cocos2d/cocos/./base/CCVector.h \
   jni/../../cocos2d/cocos/./base/CCMap.h \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/unordered_map \
@@ -315,7 +316,34 @@
   jni/../../cocos2d/cocos/./deprecated/CCBool.h \
   jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h \
   jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h \
-  jni/../../Classes/common/GameTitleScene.h
+  jni/../../Classes/common/GameTitleScene.h \
+  jni/../../Classes/common/CustomLayer.h \
+  jni/../../cocos2d/cocos/./ui/CocosGUI.h \
+  jni/../../cocos2d/cocos/./ui/UIWidget.h \
+  jni/../../cocos2d/cocos/./ui/CCProtectedNode.h \
+  jni/../../cocos2d/cocos/./ui/UILayoutParameter.h \
+  jni/../../cocos2d/cocos/./ui/GUIDefine.h \
+  jni/../../cocos2d/cocos/./base/ObjectFactory.h \
+  jni/../../cocos2d/cocos/./ui/UILayout.h \
+  jni/../../cocos2d/cocos/./ui/UIButton.h \
+  jni/../../cocos2d/cocos/./ui/UICheckBox.h \
+  jni/../../cocos2d/cocos/./ui/UIImageView.h \
+  jni/../../cocos2d/cocos/./ui/UIText.h \
+  jni/../../cocos2d/cocos/./ui/UITextAtlas.h \
+  jni/../../cocos2d/cocos/./ui/UILoadingBar.h \
+  jni/../../cocos2d/cocos/./ui/UIScrollView.h \
+  jni/../../cocos2d/cocos/./ui/UIListView.h \
+  jni/../../cocos2d/cocos/./ui/UISlider.h \
+  jni/../../cocos2d/cocos/./ui/UITextField.h \
+  jni/../../cocos2d/cocos/./ui/UITextBMFont.h \
+  jni/../../cocos2d/cocos/./ui/UIPageView.h \
+  jni/../../cocos2d/cocos/./ui/UIHelper.h \
+  jni/../../cocos2d/cocos/./ui/UIRichText.h \
+  jni/../../cocos2d/cocos/./ui/UIHBox.h \
+  jni/../../cocos2d/cocos/./ui/UIVBox.h \
+  jni/../../cocos2d/cocos/./ui/UIRelativeBox.h \
+  jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h \
+  jni/../../cocos2d/cocos/./ui/UIDeprecated.h
 
 jni/../../Classes/AppMacros.h:
 
@@ -358,6 +386,8 @@ jni/../../cocos2d/cocos/./base/CCConsole.h:
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h:
 
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+/Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_wchar_limits.h:
 
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h:
 
@@ -459,10 +489,6 @@ jni/../../cocos2d/cocos/./base/CCConsole.h:
 
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstring:
 
-/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert:
-
-/Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h:
-
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/atomic:
 
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__undef_min_max:
@@ -546,6 +572,10 @@ jni/../../cocos2d/cocos/./platform/android/CCStdC.h:
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/strings.h:
 
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h:
+
+/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert:
+
+/Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h:
 
 jni/../../cocos2d/cocos/./base/CCVector.h:
 
@@ -950,3 +980,57 @@ jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h:
 jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h:
 
 jni/../../Classes/common/GameTitleScene.h:
+
+jni/../../Classes/common/CustomLayer.h:
+
+jni/../../cocos2d/cocos/./ui/CocosGUI.h:
+
+jni/../../cocos2d/cocos/./ui/UIWidget.h:
+
+jni/../../cocos2d/cocos/./ui/CCProtectedNode.h:
+
+jni/../../cocos2d/cocos/./ui/UILayoutParameter.h:
+
+jni/../../cocos2d/cocos/./ui/GUIDefine.h:
+
+jni/../../cocos2d/cocos/./base/ObjectFactory.h:
+
+jni/../../cocos2d/cocos/./ui/UILayout.h:
+
+jni/../../cocos2d/cocos/./ui/UIButton.h:
+
+jni/../../cocos2d/cocos/./ui/UICheckBox.h:
+
+jni/../../cocos2d/cocos/./ui/UIImageView.h:
+
+jni/../../cocos2d/cocos/./ui/UIText.h:
+
+jni/../../cocos2d/cocos/./ui/UITextAtlas.h:
+
+jni/../../cocos2d/cocos/./ui/UILoadingBar.h:
+
+jni/../../cocos2d/cocos/./ui/UIScrollView.h:
+
+jni/../../cocos2d/cocos/./ui/UIListView.h:
+
+jni/../../cocos2d/cocos/./ui/UISlider.h:
+
+jni/../../cocos2d/cocos/./ui/UITextField.h:
+
+jni/../../cocos2d/cocos/./ui/UITextBMFont.h:
+
+jni/../../cocos2d/cocos/./ui/UIPageView.h:
+
+jni/../../cocos2d/cocos/./ui/UIHelper.h:
+
+jni/../../cocos2d/cocos/./ui/UIRichText.h:
+
+jni/../../cocos2d/cocos/./ui/UIHBox.h:
+
+jni/../../cocos2d/cocos/./ui/UIVBox.h:
+
+jni/../../cocos2d/cocos/./ui/UIRelativeBox.h:
+
+jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h:
+
+jni/../../cocos2d/cocos/./ui/UIDeprecated.h:

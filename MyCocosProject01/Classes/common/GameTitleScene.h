@@ -10,24 +10,32 @@
 #define __MyCocosProject01__GameTitleScene__
 
 #include "cocos2d.h"
+#include "CustomLayer.h"
+#include "ui/CocosGUI.h"
 
 USING_NS_CC;
 
-class GameTitleScene : public Layer
+class GameTitleScene : public CustomLayer
 {
 private:
 
 	void createBG();
+	void createStartButton();
+	void touchEvent_startButton(Ref *pSender, ui::Widget::TouchEventType type);
 
+
+protected:
+
+	virtual void sceneSetting(const std::string imageName) override;
+
+	
 public:
-	// there's no 'id' in cpp, so we recommend returning the class instance pointer
+
     static Scene* createScene();
 
-    // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
-    virtual bool init() override;
+	CREATE_FUNC(GameTitleScene);
 
-    // implement the "static create()" method manually
-    CREATE_FUNC(GameTitleScene);
+	virtual void onEnterTransitionDidFinish() override;
 
 };
 

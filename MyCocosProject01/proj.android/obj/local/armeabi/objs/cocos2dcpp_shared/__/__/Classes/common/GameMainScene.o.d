@@ -16,6 +16,7 @@
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdint.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+  /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_wchar_limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/limits.h \
@@ -61,8 +62,6 @@
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/iterator \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__functional_base \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/tuple \
-  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert \
-  /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/atomic \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__undef_min_max \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/stdexcept \
@@ -140,6 +139,8 @@ jni/../../Classes/common/GameMainScene.h:
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h:
 
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+/Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_wchar_limits.h:
 
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h:
 
@@ -230,10 +231,6 @@ jni/../../Classes/common/GameMainScene.h:
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__functional_base:
 
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/tuple:
-
-/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert:
-
-/Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h:
 
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/atomic:
 

@@ -21,10 +21,21 @@ static Resource smallResource = {cocos2d::Size(320, 568), "S"};
 static Resource mediumResource = {cocos2d::Size(640, 1136), "M"};
 static Resource largeResource = {cocos2d::Size(1154, 2048), "L"};
 
+static int largeResourceThreshold = 1300;
+
 static cocos2d::Size designResolutionSize = cocos2d::Size(640, 1136);
 
 #define FONT_SIZE(__SIZE) (cocos2d::Director::getInstance()->getOpenGLView()->getDesignResolutionSize().width / mediumResource.size.width * __SIZE)
 
-#define WIN_CENTER cocos2d::Vec2(cocos2d::Director::getInstance()->getWinSize().width / 2, cocos2d::Director::getInstance()->getWinSize().height / 2)
+#define WIN_POS(__X, __Y) (cocos2d::Vec2(cocos2d::Director::getInstance()->getWinSize().width * __X, cocos2d::Director::getInstance()->getWinSize().height * __Y))
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+	#define IMAGE_NAME(__NAME) (__NAME + ".png")
+#elif (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+	#define IMAGE_NAME(__NAME) (__NAME + ".png")
+#endif
+
+
+
 
 #endif
