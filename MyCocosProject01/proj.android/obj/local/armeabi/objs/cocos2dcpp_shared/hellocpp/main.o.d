@@ -20,6 +20,7 @@
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/stdint.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_types.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+  /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_wchar_limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/limits.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/linux/limits.h \
@@ -70,8 +71,6 @@
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/initializer_list \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/tuple \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstring \
-  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert \
-  /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/atomic \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__undef_min_max \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/system_error \
@@ -114,6 +113,8 @@
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/alloca.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/strings.h \
   /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h \
+  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert \
+  /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h \
   jni/../../cocos2d/cocos/./base/CCVector.h \
   jni/../../cocos2d/cocos/./base/CCMap.h \
   /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/unordered_map \
@@ -359,6 +360,8 @@ jni/../../cocos2d/cocos/./base/CCConsole.h:
 
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/machine/_types.h:
 
+/Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/_wchar_limits.h:
+
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/limits.h:
 
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/sys/limits.h:
@@ -459,10 +462,6 @@ jni/../../cocos2d/cocos/./base/CCConsole.h:
 
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cstring:
 
-/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert:
-
-/Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h:
-
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/atomic:
 
 /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/__undef_min_max:
@@ -546,6 +545,10 @@ jni/../../cocos2d/cocos/./platform/android/CCStdC.h:
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/strings.h:
 
 /Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/memory.h:
+
+/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/cassert:
+
+/Users/sasaki/android-ndk-r9d/platforms/android-9/arch-arm/usr/include/assert.h:
 
 jni/../../cocos2d/cocos/./base/CCVector.h:
 

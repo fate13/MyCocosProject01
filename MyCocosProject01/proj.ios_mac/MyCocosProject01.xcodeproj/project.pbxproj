@@ -69,6 +69,11 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		EAE491B619B282B6003EA0F3 /* GameMainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491B219B282B6003EA0F3 /* GameMainScene.cpp */; };
 		EAE491B719B282B6003EA0F3 /* GameTitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491B419B282B6003EA0F3 /* GameTitleScene.cpp */; };
+		EAE491BD19B28F93003EA0F3 /* L in Resources */ = {isa = PBXBuildFile; fileRef = EAE491BA19B28F93003EA0F3 /* L */; };
+		EAE491BE19B28F93003EA0F3 /* M in Resources */ = {isa = PBXBuildFile; fileRef = EAE491BB19B28F93003EA0F3 /* M */; };
+		EAE491BF19B28F93003EA0F3 /* S in Resources */ = {isa = PBXBuildFile; fileRef = EAE491BC19B28F93003EA0F3 /* S */; };
+		EAE491CC19B3A926003EA0F3 /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491CA19B3A926003EA0F3 /* CustomLayer.cpp */; };
+		EAE491D019B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,6 +275,13 @@
 		EAE491B319B282B6003EA0F3 /* GameMainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMainScene.h; sourceTree = "<group>"; };
 		EAE491B419B282B6003EA0F3 /* GameTitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTitleScene.cpp; sourceTree = "<group>"; };
 		EAE491B519B282B6003EA0F3 /* GameTitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTitleScene.h; sourceTree = "<group>"; };
+		EAE491BA19B28F93003EA0F3 /* L */ = {isa = PBXFileReference; lastKnownFileType = folder; path = L; sourceTree = "<group>"; };
+		EAE491BB19B28F93003EA0F3 /* M */ = {isa = PBXFileReference; lastKnownFileType = folder; path = M; sourceTree = "<group>"; };
+		EAE491BC19B28F93003EA0F3 /* S */ = {isa = PBXFileReference; lastKnownFileType = folder; path = S; sourceTree = "<group>"; };
+		EAE491CA19B3A926003EA0F3 /* CustomLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomLayer.cpp; sourceTree = "<group>"; };
+		EAE491CB19B3A926003EA0F3 /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
+		EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PleaseWaitAnimation.cpp; sourceTree = "<group>"; };
+		EAE491CF19B3C6A7003EA0F3 /* PleaseWaitAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PleaseWaitAnimation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +470,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EAE491BA19B28F93003EA0F3 /* L */,
+				EAE491BB19B28F93003EA0F3 /* M */,
+				EAE491BC19B28F93003EA0F3 /* S */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -473,6 +488,10 @@
 				EAE491B319B282B6003EA0F3 /* GameMainScene.h */,
 				EAE491B419B282B6003EA0F3 /* GameTitleScene.cpp */,
 				EAE491B519B282B6003EA0F3 /* GameTitleScene.h */,
+				EAE491CA19B3A926003EA0F3 /* CustomLayer.cpp */,
+				EAE491CB19B3A926003EA0F3 /* CustomLayer.h */,
+				EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */,
+				EAE491CF19B3C6A7003EA0F3 /* PleaseWaitAnimation.h */,
 			);
 			name = common;
 			path = ../Classes/common;
@@ -650,6 +669,7 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				EAE491BF19B28F93003EA0F3 /* S in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
@@ -657,10 +677,12 @@
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				EAE491BE19B28F93003EA0F3 /* M in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				EAE491BD19B28F93003EA0F3 /* L in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +710,8 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				EAE491B719B282B6003EA0F3 /* GameTitleScene.cpp in Sources */,
+				EAE491CC19B3A926003EA0F3 /* CustomLayer.cpp in Sources */,
+				EAE491D019B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
