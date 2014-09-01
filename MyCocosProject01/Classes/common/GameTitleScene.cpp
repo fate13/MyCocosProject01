@@ -76,7 +76,7 @@ void GameTitleScene::touchEvent_startButton(Ref *pSender, ui::Widget::TouchEvent
 
         case ui::Widget::TouchEventType::ENDED:
             CCLOG("Touch Up");
-			gotoNextScene("GameMainScene");
+			gotoNextScene(GameMainScene::createScene());
             break;
 
         case ui::Widget::TouchEventType::CANCELED:
@@ -87,14 +87,6 @@ void GameTitleScene::touchEvent_startButton(Ref *pSender, ui::Widget::TouchEvent
             break;
     }
 }
-
-void GameTitleScene::replaceScene(const std::string nextSceneName)
-{
-	if (nextSceneName == "GameMainScene") {
-		Director::getInstance()->replaceScene(GameMainScene::createScene());
-	}
-}
-
 
 
 

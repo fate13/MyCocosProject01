@@ -130,16 +130,25 @@ void CustomLayer::sceneSetting(const std::string imageName)
 	dispose("CustomLayer");
 }
 
-void CustomLayer::gotoNextScene(const std::string nextSceneName)
+void CustomLayer::gotoNextScene(Scene* nextScene)
 {
-	pleaseWaitLayer_in(CC_CALLBACK_0(CustomLayer::replaceScene, this, nextSceneName));
+	_nextScene = nextScene;
+
+	// ここでretainしておかないと、アニメーションの最中に解放されてしまう。
+	_nextScene->retain();
+
+	pleaseWaitLayer_in(CC_CALLBACK_0(CustomLayer::replaceScene, this));
 }
 
-void CustomLayer::replaceScene(const std::string nextSceneName)
+void CustomLayer::replaceScene()
 {
-	if (nextSceneName == "CustomLayer") {
-		Director::getInstance()->replaceScene(CustomLayer::createScene());
+	// gotoNextScene関数内でretainしたので、releaseする。ただし、最初のSceneは例外。
+	if(Director::getInstance()->getRunningScene()->getReferenceCount() > 2)
+	{
+		Director::getInstance()->getRunningScene()->release();
 	}
+	
+	Director::getInstance()->replaceScene(_nextScene);
 }
 
 void CustomLayer::dispose(const std::string imageName)

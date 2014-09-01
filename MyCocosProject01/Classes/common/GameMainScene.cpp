@@ -41,16 +41,9 @@ void GameMainScene::sceneSetting(const std::string imageName)
 	listener->setSwallowTouches(true);
 	listener->onTouchBegan = [this](Touch *touch, Event *event)
 	{
-		this->gotoNextScene("GameTitleScene");
+		this->gotoNextScene(GameTitleScene::createScene());
 		return true;
 	};
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, overLayer);
 
-}
-
-void GameMainScene::replaceScene(const std::string nextSceneName)
-{
-	if (nextSceneName == "GameTitleScene") {
-		Director::getInstance()->replaceScene(GameTitleScene::createScene());
-	}
 }

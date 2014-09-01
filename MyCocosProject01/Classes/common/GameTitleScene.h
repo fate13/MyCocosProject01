@@ -27,8 +27,7 @@ private:
 protected:
 
 	virtual void sceneSetting(const std::string imageName) override;
-
-	virtual void replaceScene(const std::string nextSceneName) override;
+	
 	
 public:
 
