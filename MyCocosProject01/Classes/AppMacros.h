@@ -18,12 +18,12 @@ typedef struct tagResource
 } Resource;
 
 static Resource smallResource = {cocos2d::Size(320, 568), "S"};
-static Resource mediumResource = {cocos2d::Size(640, 1136), "M"};
+static Resource mediumResource = {cocos2d::Size(640, 1138), "M"};
 static Resource largeResource = {cocos2d::Size(1154, 2048), "L"};
 
 static int largeResourceThreshold = 1300;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(640, 1136);
+static cocos2d::Size designResolutionSize = cocos2d::Size(640, 1138);
 
 #define FONT_SIZE(__SIZE) (cocos2d::Director::getInstance()->getOpenGLView()->getDesignResolutionSize().width / mediumResource.size.width * __SIZE)
 

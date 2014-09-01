@@ -142,7 +142,7 @@ void CustomLayer::gotoNextScene(Scene* nextScene)
 
 void CustomLayer::replaceScene()
 {
-	// gotoNextScene関数内でretainしたので、releaseする。ただし、最初のSceneは例外。
+	// gotoNextScene関数内でretainしたので、releaseする。ただし最初のSceneはretainしていないので例外。
 	if(Director::getInstance()->getRunningScene()->getReferenceCount() > 2)
 	{
 		Director::getInstance()->getRunningScene()->release();

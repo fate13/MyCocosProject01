@@ -6,13 +6,13 @@
 //
 //
 
+#include "AppMacros.h"
 #include "GameMainScene.h"
 #include "GameTitleScene.h"
 
 GameMainScene::~GameMainScene()
 {
-	//dispose("GameMainScene");
-	CCLOG("GameMain dispose");
+	dispose("GameMainScene");
 }
 
 Scene* GameMainScene::createScene()
@@ -25,25 +25,32 @@ Scene* GameMainScene::createScene()
 
 void GameMainScene::onEnterTransitionDidFinish()
 {
-	//loadTextureAtlasAsync("GameTitleScene");
-	sceneSetting("GameMainScene");
+	loadTextureAtlasAsync("GameMainScene");
 }
 
 void GameMainScene::sceneSetting(const std::string imageName)
 {
+	if (imageName == "GameMainScene") {
+		initPhysics();
+		createBG();
+	}
 
 	pleaseWaitLayer_out();
+}
 
-	LayerColor* overLayer = LayerColor::create(Color4B(255, 0, 0, 128));
-	this->addChild(overLayer);
-
-	EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
-	listener->setSwallowTouches(true);
-	listener->onTouchBegan = [this](Touch *touch, Event *event)
-	{
-		this->gotoNextScene(GameTitleScene::createScene());
-		return true;
-	};
-	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, overLayer);
+void GameMainScene::initPhysics()
+{
 
 }
+
+void GameMainScene::createBG()
+{
+	Sprite* bg = Sprite::createWithSpriteFrameName("BG.png");
+	bg->setPosition(WIN_POS(0.5, 0.5));
+	this->addChild(bg);
+
+
+}
+
+
+

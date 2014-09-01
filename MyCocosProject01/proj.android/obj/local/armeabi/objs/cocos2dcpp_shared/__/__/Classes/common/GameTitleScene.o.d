@@ -343,7 +343,8 @@
   jni/../../cocos2d/cocos/./ui/UIVBox.h \
   jni/../../cocos2d/cocos/./ui/UIRelativeBox.h \
   jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h \
-  jni/../../cocos2d/cocos/./ui/UIDeprecated.h
+  jni/../../cocos2d/cocos/./ui/UIDeprecated.h \
+  jni/../../Classes/common/GameMainScene.h
 
 jni/../../Classes/AppMacros.h:
 
@@ -1034,3 +1035,5 @@ jni/../../cocos2d/cocos/./ui/UIRelativeBox.h:
 jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h:
 
 jni/../../cocos2d/cocos/./ui/UIDeprecated.h:
+
+jni/../../Classes/common/GameMainScene.h:

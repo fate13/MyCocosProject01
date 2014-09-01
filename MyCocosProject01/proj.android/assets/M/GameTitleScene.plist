@@ -43,18 +43,18 @@
                 <key>sourceSize</key>
                 <string>{496,139}</string>
             </dict>
-            <key>testBG.psd</key>
+            <key>testBG.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{641,1138}}</string>
+                <string>{{0,0},{640,1138}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{641,1138}}</string>
+                <string>{{0,0},{640,1138}}</string>
                 <key>sourceSize</key>
-                <string>{641,1138}</string>
+                <string>{640,1138}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -66,7 +66,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:52e6e31cb7f1b44758ca7a61c06d0605:cd72c8239e910d1340c63f9d96006446:7d72b15b61b170886791a30422e12fc2$</string>
+            <string>$TexturePacker:SmartUpdate:f28c270f082c07238739dec737de4381:4cfebf4458ce7a02652c2359b55cab7d:7d72b15b61b170886791a30422e12fc2$</string>
             <key>textureFileName</key>
             <string>GameTitleScene.png</string>
         </dict>

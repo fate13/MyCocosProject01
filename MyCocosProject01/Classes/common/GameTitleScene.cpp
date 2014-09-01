@@ -10,11 +10,11 @@
 #include "GameTitleScene.h"
 #include "GameMainScene.h"
 
+
 GameTitleScene::~GameTitleScene()
 {
 	dispose("GameTitleScene");
 }
-
 
 Scene* GameTitleScene::createScene()
 {

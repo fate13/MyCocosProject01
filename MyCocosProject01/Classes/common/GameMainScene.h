@@ -18,6 +18,9 @@ class GameMainScene : public CustomLayer
 {
 private:
 
+	void initPhysics();
+	void createBG();
+
 
 
 protected:
