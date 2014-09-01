@@ -36,9 +36,9 @@ protected:
 	virtual void loadTextureAtlasAsync(const std::string imageName);
 	virtual void loadTextureAtlasAsyncComplete(Texture2D* texture, const std::string imageName);
 	virtual void sceneSetting(const std::string imageName);
-	virtual void dispose();
-	virtual void gotoNextScene(Scene* nextScene);
-	virtual void replaceScene(Scene* nextScene);
+	virtual void dispose(const std::string imageName);
+	virtual void gotoNextScene(const std::string nextSceneName);
+	virtual void replaceScene(const std::string nextSceneName);
 
 
 public:
@@ -50,6 +50,8 @@ public:
     CREATE_FUNC(CustomLayer);
 
 	virtual void onEnterTransitionDidFinish() override;
+
+	virtual ~CustomLayer() override;
 	
 };
 

@@ -28,6 +28,7 @@ protected:
 
 	virtual void sceneSetting(const std::string imageName) override;
 
+	virtual void replaceScene(const std::string nextSceneName) override;
 	
 public:
 
@@ -37,6 +38,7 @@ public:
 
 	virtual void onEnterTransitionDidFinish() override;
 
+	virtual ~GameTitleScene() override;
 };
 
 #endif /* defined(__MyCocosProject01__GameTitleScene__) */

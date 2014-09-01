@@ -53,9 +53,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
 	// 各シーン共通使用のテクスチャを事前に読み込んでおく
-	//std::string imageName = "common";
-	//Texture2D* texture = Director::getInstance()->getTextureCache()->addImage(IMAGE_NAME(imageName));
-	//SpriteFrameCache::getInstance()->addSpriteFramesWithFile((imageName + ".plist"), texture);
+	std::string imageName = "Common";
+	Texture2D* texture = Director::getInstance()->getTextureCache()->addImage(IMAGE_NAME(imageName));
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile((imageName + ".plist"), texture);
 
     // create a scene. it's an autorelease object
     auto scene = GameTitleScene::createScene();

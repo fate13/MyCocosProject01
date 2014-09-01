@@ -8,6 +8,12 @@
 
 #include "AppMacros.h"
 #include "GameTitleScene.h"
+#include "GameMainScene.h"
+
+GameTitleScene::~GameTitleScene()
+{
+	dispose("GameTitleScene");
+}
 
 
 Scene* GameTitleScene::createScene()
@@ -32,12 +38,12 @@ void GameTitleScene::sceneSetting(const std::string imageName)
 	}
 
 	pleaseWaitLayer_out();
-	dispose();
+
 }
 
 void GameTitleScene::createBG()
 {
-	Sprite* bg = Sprite::createWithSpriteFrameName("testBG.psd");
+	Sprite* bg = Sprite::createWithSpriteFrameName("testBG.png");
 	bg->setPosition(WIN_POS(0.5, 0.5));
 
 	this->addChild(bg);
@@ -70,7 +76,7 @@ void GameTitleScene::touchEvent_startButton(Ref *pSender, ui::Widget::TouchEvent
 
         case ui::Widget::TouchEventType::ENDED:
             CCLOG("Touch Up");
-			gotoNextScene(GameTitleScene::createScene());
+			gotoNextScene("GameMainScene");
             break;
 
         case ui::Widget::TouchEventType::CANCELED:
@@ -81,6 +87,14 @@ void GameTitleScene::touchEvent_startButton(Ref *pSender, ui::Widget::TouchEvent
             break;
     }
 }
+
+void GameTitleScene::replaceScene(const std::string nextSceneName)
+{
+	if (nextSceneName == "GameMainScene") {
+		Director::getInstance()->replaceScene(GameMainScene::createScene());
+	}
+}
+
 
 
 

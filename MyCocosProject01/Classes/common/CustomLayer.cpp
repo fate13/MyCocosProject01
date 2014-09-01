@@ -10,6 +10,10 @@
 #include "AppMacros.h"
 #include "PleaseWaitAnimation.h"
 
+CustomLayer::~CustomLayer()
+{
+	dispose("CustomLayer");
+}
 
 Scene* CustomLayer::createScene()
 {
@@ -54,7 +58,7 @@ void CustomLayer::pleaseWaitLayer_set()
 
 void CustomLayer::pleaseWaitAnimation_loop(LayerColor* overLayer)
 {
-	Sprite* img = Sprite::create("HelloWorld.png");
+	Sprite* img = Sprite::createWithSpriteFrameName("HelloWorld.png");
 	img->setName("img");
 	img->setPosition(WIN_POS(0.5, 0.5));
 	img->runAction(PleaseWaitAnimation::loopAnimation());
@@ -123,23 +127,24 @@ void CustomLayer::sceneSetting(const std::string imageName)
 
 	}
 	pleaseWaitLayer_out();
-	dispose();
+	dispose("CustomLayer");
 }
 
-void CustomLayer::gotoNextScene(Scene* nextScene)
+void CustomLayer::gotoNextScene(const std::string nextSceneName)
 {
-	nextScene->retain();
-	pleaseWaitLayer_in(CC_CALLBACK_0(CustomLayer::replaceScene, this, nextScene));
+	pleaseWaitLayer_in(CC_CALLBACK_0(CustomLayer::replaceScene, this, nextSceneName));
 }
 
-void CustomLayer::replaceScene(Scene* nextScene)
+void CustomLayer::replaceScene(const std::string nextSceneName)
 {
-	Director::getInstance()->replaceScene(nextScene);
+	if (nextSceneName == "CustomLayer") {
+		Director::getInstance()->replaceScene(CustomLayer::createScene());
+	}
 }
 
-void CustomLayer::dispose()
+void CustomLayer::dispose(const std::string imageName)
 {
-	SpriteFrameCache::getInstance()->removeUnusedSpriteFrames();
-	Director::getInstance()->getTextureCache()->removeUnusedTextures();
+	SpriteFrameCache::getInstance()->removeSpriteFramesFromFile((imageName + ".plist"));
+	Director::getInstance()->getTextureCache()->removeTextureForKey(IMAGE_NAME(imageName));
 }
 
