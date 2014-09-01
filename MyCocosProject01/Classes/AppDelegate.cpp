@@ -27,7 +27,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
 	// リソースのマルチリゾリューション対応
 	// iPad用リソース
-	if (glview->getFrameSize().height > mediumResource.size.height)
+	if (glview->getFrameSize().height > largeResourceThreshold)
 	{
 		director->setContentScaleFactor(largeResource.size.height / designResolutionSize.height);
 		FileUtils::getInstance()->addSearchPath(largeResource.directory);
@@ -52,10 +52,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
+	// 各シーン共通使用のテクスチャを事前に読み込んでおく
+	//std::string imageName = "common";
+	//Texture2D* texture = Director::getInstance()->getTextureCache()->addImage(IMAGE_NAME(imageName));
+	//SpriteFrameCache::getInstance()->addSpriteFramesWithFile((imageName + ".plist"), texture);
+
     // create a scene. it's an autorelease object
     auto scene = GameTitleScene::createScene();
 
-    // run
+	// run
     director->runWithScene(scene);
 
     return true;

@@ -72,6 +72,8 @@
 		EAE491BD19B28F93003EA0F3 /* L in Resources */ = {isa = PBXBuildFile; fileRef = EAE491BA19B28F93003EA0F3 /* L */; };
 		EAE491BE19B28F93003EA0F3 /* M in Resources */ = {isa = PBXBuildFile; fileRef = EAE491BB19B28F93003EA0F3 /* M */; };
 		EAE491BF19B28F93003EA0F3 /* S in Resources */ = {isa = PBXBuildFile; fileRef = EAE491BC19B28F93003EA0F3 /* S */; };
+		EAE491CC19B3A926003EA0F3 /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491CA19B3A926003EA0F3 /* CustomLayer.cpp */; };
+		EAE491D019B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +278,10 @@
 		EAE491BA19B28F93003EA0F3 /* L */ = {isa = PBXFileReference; lastKnownFileType = folder; path = L; sourceTree = "<group>"; };
 		EAE491BB19B28F93003EA0F3 /* M */ = {isa = PBXFileReference; lastKnownFileType = folder; path = M; sourceTree = "<group>"; };
 		EAE491BC19B28F93003EA0F3 /* S */ = {isa = PBXFileReference; lastKnownFileType = folder; path = S; sourceTree = "<group>"; };
+		EAE491CA19B3A926003EA0F3 /* CustomLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomLayer.cpp; sourceTree = "<group>"; };
+		EAE491CB19B3A926003EA0F3 /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
+		EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PleaseWaitAnimation.cpp; sourceTree = "<group>"; };
+		EAE491CF19B3C6A7003EA0F3 /* PleaseWaitAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PleaseWaitAnimation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -482,6 +488,10 @@
 				EAE491B319B282B6003EA0F3 /* GameMainScene.h */,
 				EAE491B419B282B6003EA0F3 /* GameTitleScene.cpp */,
 				EAE491B519B282B6003EA0F3 /* GameTitleScene.h */,
+				EAE491CA19B3A926003EA0F3 /* CustomLayer.cpp */,
+				EAE491CB19B3A926003EA0F3 /* CustomLayer.h */,
+				EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */,
+				EAE491CF19B3C6A7003EA0F3 /* PleaseWaitAnimation.h */,
 			);
 			name = common;
 			path = ../Classes/common;
@@ -700,6 +710,8 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				EAE491B719B282B6003EA0F3 /* GameTitleScene.cpp in Sources */,
+				EAE491CC19B3A926003EA0F3 /* CustomLayer.cpp in Sources */,
+				EAE491D019B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
