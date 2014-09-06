@@ -66,6 +66,9 @@
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		EA5A2EB819B52ACF001B82E3 /* Physics in Resources */ = {isa = PBXBuildFile; fileRef = EA5A2EB719B52ACF001B82E3 /* Physics */; };
+		EAB7270E19B76E6E007BEB6A /* GB2ShapeCache-x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB7270C19B76E6E007BEB6A /* GB2ShapeCache-x.cpp */; };
+		EAB7271119B77E9C007BEB6A /* CustomPhysicsSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB7270F19B77E9C007BEB6A /* CustomPhysicsSprite.cpp */; };
+		EAB7271819B90B81007BEB6A /* GameMainUserController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB7271619B90B81007BEB6A /* GameMainUserController.cpp */; };
 		EAE491B619B282B6003EA0F3 /* GameMainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491B219B282B6003EA0F3 /* GameMainScene.cpp */; };
 		EAE491B719B282B6003EA0F3 /* GameTitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491B419B282B6003EA0F3 /* GameTitleScene.cpp */; };
 		EAE491BD19B28F93003EA0F3 /* L in Resources */ = {isa = PBXBuildFile; fileRef = EAE491BA19B28F93003EA0F3 /* L */; };
@@ -269,6 +272,13 @@
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		EA5A2EB719B52ACF001B82E3 /* Physics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Physics; sourceTree = "<group>"; };
+		EAB7270C19B76E6E007BEB6A /* GB2ShapeCache-x.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "GB2ShapeCache-x.cpp"; sourceTree = "<group>"; };
+		EAB7270D19B76E6E007BEB6A /* GB2ShapeCache-x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GB2ShapeCache-x.h"; sourceTree = "<group>"; };
+		EAB7270F19B77E9C007BEB6A /* CustomPhysicsSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomPhysicsSprite.cpp; sourceTree = "<group>"; };
+		EAB7271019B77E9C007BEB6A /* CustomPhysicsSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPhysicsSprite.h; sourceTree = "<group>"; };
+		EAB7271519B90236007BEB6A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameConfig.h; path = ../Classes/GameConfig.h; sourceTree = "<group>"; };
+		EAB7271619B90B81007BEB6A /* GameMainUserController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMainUserController.cpp; sourceTree = "<group>"; };
+		EAB7271719B90B81007BEB6A /* GameMainUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMainUserController.h; sourceTree = "<group>"; };
 		EAE491A619B270D4003EA0F3 /* AppMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppMacros.h; path = ../Classes/AppMacros.h; sourceTree = "<group>"; };
 		EAE491B219B282B6003EA0F3 /* GameMainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMainScene.cpp; sourceTree = "<group>"; };
 		EAE491B319B282B6003EA0F3 /* GameMainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMainScene.h; sourceTree = "<group>"; };
@@ -354,6 +364,7 @@
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				EAE491A619B270D4003EA0F3 /* AppMacros.h */,
+				EAB7271519B90236007BEB6A /* GameConfig.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -480,9 +491,19 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
+		EAB7270B19B76E42007BEB6A /* physicsEditor */ = {
+			isa = PBXGroup;
+			children = (
+				EAB7270C19B76E6E007BEB6A /* GB2ShapeCache-x.cpp */,
+				EAB7270D19B76E6E007BEB6A /* GB2ShapeCache-x.h */,
+			);
+			path = physicsEditor;
+			sourceTree = "<group>";
+		};
 		EAE491B119B282B6003EA0F3 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				EAB7270B19B76E42007BEB6A /* physicsEditor */,
 				EAE491B219B282B6003EA0F3 /* GameMainScene.cpp */,
 				EAE491B319B282B6003EA0F3 /* GameMainScene.h */,
 				EAE491B419B282B6003EA0F3 /* GameTitleScene.cpp */,
@@ -491,6 +512,10 @@
 				EAE491CB19B3A926003EA0F3 /* CustomLayer.h */,
 				EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */,
 				EAE491CF19B3C6A7003EA0F3 /* PleaseWaitAnimation.h */,
+				EAB7270F19B77E9C007BEB6A /* CustomPhysicsSprite.cpp */,
+				EAB7271019B77E9C007BEB6A /* CustomPhysicsSprite.h */,
+				EAB7271619B90B81007BEB6A /* GameMainUserController.cpp */,
+				EAB7271719B90B81007BEB6A /* GameMainUserController.h */,
 			);
 			name = common;
 			path = ../Classes/common;
@@ -703,13 +728,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				EAB7270E19B76E6E007BEB6A /* GB2ShapeCache-x.cpp in Sources */,
 				EAE491B619B282B6003EA0F3 /* GameMainScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				EAB7271119B77E9C007BEB6A /* CustomPhysicsSprite.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				EAE491B719B282B6003EA0F3 /* GameTitleScene.cpp in Sources */,
 				EAE491CC19B3A926003EA0F3 /* CustomLayer.cpp in Sources */,
 				EAE491D019B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp in Sources */,
+				EAB7271819B90B81007BEB6A /* GameMainUserController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,7 +822,7 @@
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
 					"COCOS2D_DEBUG=1",
-					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					"CC_ENABLE_BOX2D_INTEGRATION=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
@@ -826,7 +854,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
-					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					"CC_ENABLE_BOX2D_INTEGRATION=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
@@ -859,7 +887,7 @@
 					USE_FILE32API,
 					CC_TARGET_OS_MAC,
 					"COCOS2D_DEBUG=1",
-					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					"CC_ENABLE_BOX2D_INTEGRATION=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
@@ -886,7 +914,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					USE_FILE32API,
 					CC_TARGET_OS_MAC,
-					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					"CC_ENABLE_BOX2D_INTEGRATION=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (

@@ -23,9 +23,9 @@
 				<array>
 
 					<dict>
-                        <key>density</key> <real>100</real>
-                        <key>friction</key> <real>0.1</real>
-                        <key>restitution</key> <real>0.5</real>
+                        <key>density</key> <real>1</real>
+                        <key>friction</key> <real>1</real>
+                        <key>restitution</key> <real>0.1</real>
                         <key>filter_categoryBits</key> <integer>1</integer>
                         <key>filter_groupIndex</key> <integer>0</integer>
                         <key>filter_maskBits</key> <integer>65535</integer>
@@ -37,48 +37,48 @@
 						<array>
 							<array>	
 								<string>{ 520.000,167.000 }</string>	
-								<string>{ 520.000,-169.000 }</string>	
+								<string>{ 520.000,-171.000 }</string>	
 								<string>{ 570.000,-569.000 }</string>	
 								<string>{ 570.000,167.000 }</string>
 							</array>
 							<array>	
 								<string>{ 570.000,169.000 }</string>	
 								<string>{ 570.000,569.000 }</string>	
-								<string>{ 151.000,424.000 }</string>	
-								<string>{ 520.000,169.000 }</string>
+								<string>{ 153.000,425.000 }</string>	
+								<string>{ 520.000,171.000 }</string>
 							</array>
 							<array>	
 								<string>{ 570.000,569.000 }</string>	
 								<string>{ -570.000,569.000 }</string>	
-								<string>{ -151.000,424.000 }</string>	
-								<string>{ 151.000,424.000 }</string>
+								<string>{ -153.000,425.000 }</string>	
+								<string>{ 153.000,425.000 }</string>
 							</array>
 							<array>	
-								<string>{ -151.000,424.000 }</string>	
+								<string>{ -153.000,425.000 }</string>	
 								<string>{ -570.000,569.000 }</string>	
-								<string>{ -520.000,169.000 }</string>
+								<string>{ -520.000,171.000 }</string>
 							</array>
 							<array>	
-								<string>{ 520.000,-169.000 }</string>	
-								<string>{ 151.000,-423.000 }</string>	
+								<string>{ 520.000,-171.000 }</string>	
+								<string>{ 153.000,-425.000 }</string>	
 								<string>{ 570.000,-569.000 }</string>
 							</array>
 							<array>	
 								<string>{ 570.000,-569.000 }</string>	
-								<string>{ 151.000,-423.000 }</string>	
-								<string>{ -151.000,-423.000 }</string>	
+								<string>{ 153.000,-425.000 }</string>	
+								<string>{ -152.000,-425.000 }</string>	
 								<string>{ -570.000,-569.000 }</string>
 							</array>
 							<array>	
-								<string>{ -151.000,-423.000 }</string>	
-								<string>{ -520.000,-169.000 }</string>	
+								<string>{ -152.000,-425.000 }</string>	
+								<string>{ -520.000,-171.000 }</string>	
 								<string>{ -570.000,-569.000 }</string>
 							</array>
 							<array>	
 								<string>{ -570.000,569.000 }</string>	
 								<string>{ -570.000,-569.000 }</string>	
-								<string>{ -520.000,-169.000 }</string>	
-								<string>{ -520.000,169.000 }</string>
+								<string>{ -520.000,-171.000 }</string>	
+								<string>{ -520.000,171.000 }</string>
 							</array>
 						</array>
                     </dict>
@@ -109,9 +109,9 @@
 				<array>
 
 					<dict>
-                        <key>density</key> <real>100</real>
-                        <key>friction</key> <real>0.1</real>
-                        <key>restitution</key> <real>0.5</real>
+                        <key>density</key> <real>1</real>
+                        <key>friction</key> <real>1</real>
+                        <key>restitution</key> <real>0.1</real>
                         <key>filter_categoryBits</key> <integer>1</integer>
                         <key>filter_groupIndex</key> <integer>0</integer>
                         <key>filter_maskBits</key> <integer>65535</integer>

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/common/CustomLayer.cpp"
-            timestampString = "431279074.366848"
+            timestampString = "431450001.408159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "CustomLayer::loadTextureAtlasAsync(const std::string imageName)"
             landmarkType = "5">
          </BreakpointContent>
@@ -54,32 +54,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../cocos2d/cocos/2d/CCSpriteFrameCache.cpp"
-            timestampString = "431293033.104254"
+            filePath = "../cocos2d/cocos/2d/CCNode.cpp"
+            timestampString = "431458963.020754"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
-            landmarkName = "SpriteFrameCache::removeSpriteFramesFromDictionary(ValueMap&amp; dictionary)"
+            startingLineNumber = "1465"
+            endingLineNumber = "1465"
+            landmarkName = "Node::scheduleUpdate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../cocos2d/cocos/2d/CCSpriteFrameCache.cpp"
-            timestampString = "431293399.535311"
+            filePath = "../Classes/common/GameMainScene.cpp"
+            timestampString = "431614297.748345"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
-            landmarkName = "SpriteFrameCache::removeSpriteFramesFromDictionary(ValueMap&amp; dictionary)"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "GameMainScene::createReturnButton()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/common/GameMainUserController.cpp"
+            timestampString = "431566439.745121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "GameMainUserController::touchBegan(cocos2d::Touch *touch, cocos2d::Event *event, Node* obj)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

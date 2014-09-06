@@ -60,18 +60,22 @@ void CustomLayer::pleaseWaitAnimation_loop(LayerColor* overLayer)
 {
 	Sprite* img = Sprite::createWithSpriteFrameName("HelloWorld.png");
 	img->setName("img");
-	img->setPosition(WIN_POS(0.5, 0.5));
+	img->setPosition(WIN_POS(0.5f, 0.5f));
 	img->runAction(PleaseWaitAnimation::loopAnimation());
 	overLayer->addChild(img);
 }
 
-void CustomLayer::pleaseWaitLayer_out()
+void CustomLayer::pleaseWaitLayer_out(std::function<void()> callBackFunc)
 {
 	LayerColor* overLayer = static_cast<LayerColor*>( this->getChildByName("pleaseWaitLayer") );
 
-	std::function<void()> func = [overLayer](){
+	std::function<void()> func = [overLayer, callBackFunc](){
 		Director::getInstance()->getEventDispatcher()->removeEventListenersForTarget(overLayer);
 		overLayer->setVisible(false);
+
+		if (callBackFunc) {
+			callBackFunc();
+		}
 	};
 
 	pleaseWaitAnimation_out(overLayer, func);
@@ -126,7 +130,7 @@ void CustomLayer::sceneSetting(const std::string imageName)
 	{
 
 	}
-	pleaseWaitLayer_out();
+	pleaseWaitLayer_out(nullptr);
 	dispose("CustomLayer");
 }
 

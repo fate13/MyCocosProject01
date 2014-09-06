@@ -19,14 +19,10 @@ class CustomLayer : public Layer
 {
 private:
 
-	void createBG();
-	void createStartButton();
-
-
 protected:
 
 	virtual void pleaseWaitLayer_set();
-	virtual void pleaseWaitLayer_out();
+	virtual void pleaseWaitLayer_out(std::function<void()> callBackFunc);
 	virtual void pleaseWaitLayer_in(std::function<void()> callBackFunc);
 
 	virtual void pleaseWaitAnimation_loop(LayerColor* overLayer);

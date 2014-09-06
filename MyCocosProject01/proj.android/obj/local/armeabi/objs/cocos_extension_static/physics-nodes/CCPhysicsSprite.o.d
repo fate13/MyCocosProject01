@@ -162,27 +162,43 @@
   jni/../../cocos2d/cocos/./renderer/CCRenderCommandPool.h \
   jni/../../cocos2d/cocos/./renderer/CCCustomCommand.h \
   jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/chipmunk.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/chipmunk_types.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpVect.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpBB.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpSpatialIndex.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpBody.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpShape.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpPolyShape.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpArbiter.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpConstraint.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpPinJoint.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpGearJoint.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h \
-  jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpSpace.h
+  jni/../../cocos2d/external/Box2D/../Box2D/Box2D.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Settings.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Draw.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Math.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Timer.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2CircleShape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2Shape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2BlockAllocator.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2Collision.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2EdgeShape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2ChainShape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2PolygonShape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2BroadPhase.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2DynamicTree.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2GrowableStack.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2Distance.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2TimeOfImpact.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2Body.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2Fixture.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2WorldCallbacks.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2TimeStep.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2World.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2StackAllocator.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2ContactManager.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Contacts/b2Contact.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2DistanceJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2Joint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2FrictionJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2GearJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MotorJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MouseJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PulleyJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h
 
 jni/../../cocos2d/extensions/physics-nodes/CCPhysicsSprite.h:
 
@@ -508,44 +524,76 @@ jni/../../cocos2d/cocos/./renderer/CCCustomCommand.h:
 
 jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/chipmunk.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Box2D.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/chipmunk_types.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Settings.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpVect.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Draw.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpBB.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Math.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpSpatialIndex.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Timer.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpBody.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2CircleShape.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpShape.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2Shape.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpPolyShape.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2BlockAllocator.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpArbiter.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2Collision.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpConstraint.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2EdgeShape.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpPinJoint.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2ChainShape.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpSlideJoint.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2PolygonShape.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpPivotJoint.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2BroadPhase.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpGrooveJoint.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2DynamicTree.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpDampedSpring.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2GrowableStack.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpDampedRotarySpring.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2Distance.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpRotaryLimitJoint.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2TimeOfImpact.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpRatchetJoint.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2Body.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpGearJoint.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2Fixture.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2WorldCallbacks.h:
 
-jni/../../cocos2d/cocos/./../external/chipmunk/include/chipmunk/cpSpace.h:
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2TimeStep.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2World.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2StackAllocator.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2ContactManager.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Contacts/b2Contact.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2DistanceJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2Joint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2FrictionJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2GearJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MotorJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MouseJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PrismaticJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PulleyJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RevoluteJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h:

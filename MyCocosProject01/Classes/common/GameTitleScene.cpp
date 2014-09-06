@@ -37,14 +37,14 @@ void GameTitleScene::sceneSetting(const std::string imageName)
 		createStartButton();
 	}
 
-	pleaseWaitLayer_out();
+	pleaseWaitLayer_out(nullptr);
 
 }
 
 void GameTitleScene::createBG()
 {
 	Sprite* bg = Sprite::createWithSpriteFrameName("testBG.png");
-	bg->setPosition(WIN_POS(0.5, 0.5));
+	bg->setPosition(WIN_POS(0.5f, 0.5f));
 
 	this->addChild(bg);
 }
@@ -53,7 +53,7 @@ void GameTitleScene::createStartButton()
 {
 	ui::Button* button = ui::Button::create("startButton_normal.png", "startButton_pressed.png", "startButton_disabled.png", ui::TextureResType::PLIST);
 	button->setPressedActionEnabled(true);
-	button->setPosition(WIN_POS(0.5, 0.5));
+	button->setPosition(WIN_POS(0.5f, 0.5f));
 	button->addTouchEventListener(CC_CALLBACK_2(GameTitleScene::touchEvent_startButton, this));
 
 	ui::Layout* layout = ui::Layout::create();
