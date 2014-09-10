@@ -76,6 +76,7 @@
 		EAE491BF19B28F93003EA0F3 /* S in Resources */ = {isa = PBXBuildFile; fileRef = EAE491BC19B28F93003EA0F3 /* S */; };
 		EAE491CC19B3A926003EA0F3 /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491CA19B3A926003EA0F3 /* CustomLayer.cpp */; };
 		EAE491D019B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */; };
+		EAF06FF819BAC92D002C6054 /* GameMainModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF06FF619BAC92D002C6054 /* GameMainModel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -291,6 +292,8 @@
 		EAE491CB19B3A926003EA0F3 /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
 		EAE491CE19B3C6A7003EA0F3 /* PleaseWaitAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PleaseWaitAnimation.cpp; sourceTree = "<group>"; };
 		EAE491CF19B3C6A7003EA0F3 /* PleaseWaitAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PleaseWaitAnimation.h; sourceTree = "<group>"; };
+		EAF06FF619BAC92D002C6054 /* GameMainModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMainModel.cpp; sourceTree = "<group>"; };
+		EAF06FF719BAC92D002C6054 /* GameMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMainModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -516,6 +519,8 @@
 				EAB7271019B77E9C007BEB6A /* CustomPhysicsSprite.h */,
 				EAB7271619B90B81007BEB6A /* GameMainUserController.cpp */,
 				EAB7271719B90B81007BEB6A /* GameMainUserController.h */,
+				EAF06FF619BAC92D002C6054 /* GameMainModel.cpp */,
+				EAF06FF719BAC92D002C6054 /* GameMainModel.h */,
 			);
 			name = common;
 			path = ../Classes/common;
@@ -729,6 +734,7 @@
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				EAB7270E19B76E6E007BEB6A /* GB2ShapeCache-x.cpp in Sources */,
+				EAF06FF819BAC92D002C6054 /* GameMainModel.cpp in Sources */,
 				EAE491B619B282B6003EA0F3 /* GameMainScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,

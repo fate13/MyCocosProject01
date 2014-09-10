@@ -17,18 +17,7 @@ USING_NS_CC;
 
 class GameTitleScene : public CustomLayer
 {
-private:
 
-	void createBG();
-	void createStartButton();
-	void touchEvent_startButton(Ref *pSender, ui::Widget::TouchEventType type);
-
-
-protected:
-
-	virtual void sceneSetting(const std::string imageName) override;
-	
-	
 public:
 
     static Scene* createScene();
@@ -38,6 +27,19 @@ public:
 	virtual void onEnterTransitionDidFinish() override;
 
 	virtual ~GameTitleScene() override;
+
+
+protected:
+
+	virtual void sceneSetting(const std::string imageName) override;
+
+
+private:
+
+	void createBG();
+	void createStartButton();
+	void touchEvent_startButton(Ref *pSender, ui::Widget::TouchEventType type);	
+
 };
 
 #endif /* defined(__MyCocosProject01__GameTitleScene__) */

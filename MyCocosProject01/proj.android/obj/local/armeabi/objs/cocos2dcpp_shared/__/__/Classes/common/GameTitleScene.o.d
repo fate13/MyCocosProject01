@@ -382,7 +382,33 @@
   jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h \
   jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h \
   jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h \
-  jni/../../Classes/common/GameMainUserController.h
+  jni/../../Classes/common/GameMainUserController.h \
+  jni/../../Classes/common/GameMainModel.h \
+  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/random \
+  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/numeric \
+  jni/../../Classes/common/CustomPhysicsSprite.h \
+  jni/../../cocos2d/extensions/../extensions/cocos-ext.h \
+  jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h \
+  jni/../../cocos2d/extensions/../extensions/GUI/CCControlExtension/CCControlExtensions.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCScale9Sprite.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControl.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlButton.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCInvocation.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.h \
+  jni/../../cocos2d/extensions/../extensions/GUI/CCScrollView/CCScrollView.h \
+  jni/../../cocos2d/extensions/../extensions/GUI/CCScrollView/CCTableView.h \
+  jni/../../cocos2d/extensions/GUI/CCScrollView/CCTableViewCell.h \
+  jni/../../cocos2d/extensions/../extensions/GUI/CCEditBox/CCEditBox.h \
+  jni/../../cocos2d/extensions/../extensions/physics-nodes/CCPhysicsDebugNode.h \
+  jni/../../cocos2d/extensions/../extensions/physics-nodes/CCPhysicsSprite.h \
+  jni/../../cocos2d/extensions/../extensions/assets-manager/AssetsManager.h
 
 jni/../../Classes/AppMacros.h:
 
@@ -1151,3 +1177,55 @@ jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h:
 jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h:
 
 jni/../../Classes/common/GameMainUserController.h:
+
+jni/../../Classes/common/GameMainModel.h:
+
+/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/random:
+
+/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/numeric:
+
+jni/../../Classes/common/CustomPhysicsSprite.h:
+
+jni/../../cocos2d/extensions/../extensions/cocos-ext.h:
+
+jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h:
+
+jni/../../cocos2d/extensions/../extensions/GUI/CCControlExtension/CCControlExtensions.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCScale9Sprite.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControl.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlButton.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCInvocation.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.h:
+
+jni/../../cocos2d/extensions/../extensions/GUI/CCScrollView/CCScrollView.h:
+
+jni/../../cocos2d/extensions/../extensions/GUI/CCScrollView/CCTableView.h:
+
+jni/../../cocos2d/extensions/GUI/CCScrollView/CCTableViewCell.h:
+
+jni/../../cocos2d/extensions/../extensions/GUI/CCEditBox/CCEditBox.h:
+
+jni/../../cocos2d/extensions/../extensions/physics-nodes/CCPhysicsDebugNode.h:
+
+jni/../../cocos2d/extensions/../extensions/physics-nodes/CCPhysicsSprite.h:
+
+jni/../../cocos2d/extensions/../extensions/assets-manager/AssetsManager.h:

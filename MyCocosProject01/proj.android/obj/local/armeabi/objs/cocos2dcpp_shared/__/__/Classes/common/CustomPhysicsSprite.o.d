@@ -1,8 +1,6 @@
 ./obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/common/CustomPhysicsSprite.o: \
   jni/../../Classes/common/CustomPhysicsSprite.cpp \
-  jni/../../Classes/GameConfig.h \
-  jni/../../Classes/common/CustomPhysicsSprite.h \
-  jni/../../cocos2d/cocos/./cocos2d.h \
+  jni/../../Classes/AppMacros.h jni/../../cocos2d/cocos/./cocos2d.h \
   jni/../../cocos2d/cocos/./base/ccConfig.h \
   jni/../../cocos2d/cocos/./base/CCPlatformConfig.h \
   jni/../../cocos2d/cocos/./base/CCRef.h \
@@ -318,6 +316,8 @@
   jni/../../cocos2d/cocos/./deprecated/CCBool.h \
   jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h \
   jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h \
+  jni/../../Classes/GameConfig.h \
+  jni/../../Classes/common/CustomPhysicsSprite.h \
   jni/../../cocos2d/extensions/../extensions/cocos-ext.h \
   jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h \
   jni/../../cocos2d/extensions/../extensions/GUI/CCControlExtension/CCControlExtensions.h \
@@ -377,11 +377,12 @@
   jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h \
   jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h \
   jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h \
+  jni/../../Classes/common/GameMainModel.h \
+  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/random \
+  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/numeric \
   jni/../../Classes/common/physicsEditor/GB2ShapeCache-x.h
 
-jni/../../Classes/GameConfig.h:
-
-jni/../../Classes/common/CustomPhysicsSprite.h:
+jni/../../Classes/AppMacros.h:
 
 jni/../../cocos2d/cocos/./cocos2d.h:
 
@@ -1015,6 +1016,10 @@ jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h:
 
 jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h:
 
+jni/../../Classes/GameConfig.h:
+
+jni/../../Classes/common/CustomPhysicsSprite.h:
+
 jni/../../cocos2d/extensions/../extensions/cocos-ext.h:
 
 jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h:
@@ -1132,5 +1137,11 @@ jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h:
 jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h:
 
 jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h:
+
+jni/../../Classes/common/GameMainModel.h:
+
+/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/random:
+
+/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/numeric:
 
 jni/../../Classes/common/physicsEditor/GB2ShapeCache-x.h:

@@ -18,6 +18,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/common/PleaseWaitAnimation.cpp \
                    ../../Classes/common/CustomPhysicsSprite.cpp \
                    ../../Classes/common/GameMainUserController.cpp \
+                   ../../Classes/common/GameMainModel.cpp \
                    ../../Classes/common/physicsEditor/GB2ShapeCache-x.cpp \
 
 

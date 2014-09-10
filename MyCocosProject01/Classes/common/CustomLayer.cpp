@@ -9,6 +9,7 @@
 #include "CustomLayer.h"
 #include "AppMacros.h"
 #include "PleaseWaitAnimation.h"
+#include <limits.h>
 
 CustomLayer::~CustomLayer()
 {
@@ -42,8 +43,8 @@ void CustomLayer::onEnterTransitionDidFinish()
 
 void CustomLayer::pleaseWaitLayer_set()
 {
-	LayerColor* overLayer = LayerColor::create(Color4B(0, 0, 0, 0));
-	this->addChild(overLayer, 256, "pleaseWaitLayer");
+	Layer* overLayer = Layer::create();
+	this->addChild(overLayer, std::numeric_limits<int>::max(), "pleaseWaitLayer");
 
 	EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
 	listener->setSwallowTouches(true);
@@ -56,7 +57,7 @@ void CustomLayer::pleaseWaitLayer_set()
 	pleaseWaitAnimation_loop(overLayer);
 }
 
-void CustomLayer::pleaseWaitAnimation_loop(LayerColor* overLayer)
+void CustomLayer::pleaseWaitAnimation_loop(Layer* overLayer)
 {
 	Sprite* img = Sprite::createWithSpriteFrameName("HelloWorld.png");
 	img->setName("img");
@@ -65,9 +66,9 @@ void CustomLayer::pleaseWaitAnimation_loop(LayerColor* overLayer)
 	overLayer->addChild(img);
 }
 
-void CustomLayer::pleaseWaitLayer_out(std::function<void()> callBackFunc)
+void CustomLayer::pleaseWaitLayer_out(const std::function<void()> callBackFunc)
 {
-	LayerColor* overLayer = static_cast<LayerColor*>( this->getChildByName("pleaseWaitLayer") );
+	Layer* overLayer = static_cast<Layer*>( this->getChildByName("pleaseWaitLayer") );
 
 	std::function<void()> func = [overLayer, callBackFunc](){
 		Director::getInstance()->getEventDispatcher()->removeEventListenersForTarget(overLayer);
@@ -81,7 +82,7 @@ void CustomLayer::pleaseWaitLayer_out(std::function<void()> callBackFunc)
 	pleaseWaitAnimation_out(overLayer, func);
 }
 
-void CustomLayer::pleaseWaitAnimation_out(LayerColor* overLayer, std::function<void()> callBackFunc)
+void CustomLayer::pleaseWaitAnimation_out(const Layer* overLayer, const std::function<void()> callBackFunc)
 {
 	Sprite* img = (Sprite*)overLayer->getChildByName("img");
 	img->stopAllActions();
@@ -89,9 +90,9 @@ void CustomLayer::pleaseWaitAnimation_out(LayerColor* overLayer, std::function<v
 }
 
 
-void CustomLayer::pleaseWaitLayer_in(std::function<void()> callBackFunc)
+void CustomLayer::pleaseWaitLayer_in(const std::function<void()> callBackFunc)
 {
-	LayerColor* overLayer = static_cast<LayerColor*>( this->getChildByName("pleaseWaitLayer") );
+	Layer* overLayer = static_cast<Layer*>( this->getChildByName("pleaseWaitLayer") );
 
 	EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
 	listener->setSwallowTouches(true);
@@ -106,7 +107,7 @@ void CustomLayer::pleaseWaitLayer_in(std::function<void()> callBackFunc)
 	pleaseWaitAnimation_in(overLayer, callBackFunc);
 }
 
-void CustomLayer::pleaseWaitAnimation_in(LayerColor* overLayer, std::function<void()> callBackFunc)
+void CustomLayer::pleaseWaitAnimation_in(const Layer* overLayer, const std::function<void()> callBackFunc)
 {
 	Sprite* img = (Sprite*)overLayer->getChildByName("img");
 	img->stopAllActions();
