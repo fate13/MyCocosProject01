@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>29E8A093-1278-4CD7-9E8B-DBB03AD927BE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MyCocosProject01</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>852278DF-6364-4509-AA2F-5957AB40DB0E</key>
+		<string>ssh://github.com/fate13/MyCocosProject01.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MyCocosProject01/proj.ios_mac/MyCocosProject01.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>852278DF-6364-4509-AA2F-5957AB40DB0E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/fate13/MyCocosProject01.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>852278DF-6364-4509-AA2F-5957AB40DB0E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>852278DF-6364-4509-AA2F-5957AB40DB0E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyCocosProject01</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,6 +1,6 @@
 ./obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AppDelegate.o: \
-  jni/../../Classes/AppDelegate.cpp jni/../../Classes/AppDelegate.h \
-  jni/../../cocos2d/cocos/./cocos2d.h \
+  jni/../../Classes/AppDelegate.cpp jni/../../Classes/GameConfig.h \
+  jni/../../Classes/AppDelegate.h jni/../../cocos2d/cocos/./cocos2d.h \
   jni/../../cocos2d/cocos/./base/ccConfig.h \
   jni/../../cocos2d/cocos/./base/CCPlatformConfig.h \
   jni/../../cocos2d/cocos/./base/CCRef.h \
@@ -345,6 +345,8 @@
   jni/../../cocos2d/cocos/./ui/UIRelativeBox.h \
   jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h \
   jni/../../cocos2d/cocos/./ui/UIDeprecated.h
+
+jni/../../Classes/GameConfig.h:
 
 jni/../../Classes/AppDelegate.h:
 

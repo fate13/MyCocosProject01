@@ -10,7 +10,7 @@
 
 FiniteTimeAction* PleaseWaitAnimation::loopAnimation()
 {
-	RotateBy* rotate = RotateBy::create(5, 90);
+	RotateBy* rotate = RotateBy::create(1, 90);
 
 	RepeatForever* repeat = RepeatForever::create(rotate);
 
@@ -21,7 +21,7 @@ FiniteTimeAction* PleaseWaitAnimation::outAnimation(std::function<void()> callBa
 {
 	Size winSize = Director::getInstance()->getWinSize();
 
-	MoveTo* move = MoveTo::create(1, Vec2(winSize.width / 2, winSize.height * 1.5));
+	MoveTo* move = MoveTo::create(0.3, Vec2(winSize.width / 2, winSize.height * 1.5));
 	CallFunc* func = CallFunc::create(callBackFunc);
 	Sequence* sequence = Sequence::create(move, func, nullptr);
 
@@ -33,7 +33,7 @@ FiniteTimeAction* PleaseWaitAnimation::inAnimation(std::function<void()> callBac
 	Size winSize = Director::getInstance()->getWinSize();
 
 	Place* place = Place::create(Vec2(winSize.width / 2, -winSize.height * 0.5));
-	MoveTo* move = MoveTo::create(3, Vec2(winSize.width / 2, winSize.height / 2));
+	MoveTo* move = MoveTo::create(0.3, Vec2(winSize.width / 2, winSize.height / 2));
 	CallFunc* func = CallFunc::create(callBackFunc);
 	Sequence* sequence = Sequence::create(place, move, func, nullptr);
 

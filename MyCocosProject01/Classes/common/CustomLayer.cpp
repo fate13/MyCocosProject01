@@ -9,7 +9,12 @@
 #include "CustomLayer.h"
 #include "AppMacros.h"
 #include "PleaseWaitAnimation.h"
+#include <limits.h>
 
+CustomLayer::~CustomLayer()
+{
+	dispose("CustomLayer");
+}
 
 Scene* CustomLayer::createScene()
 {
@@ -38,8 +43,8 @@ void CustomLayer::onEnterTransitionDidFinish()
 
 void CustomLayer::pleaseWaitLayer_set()
 {
-	LayerColor* overLayer = LayerColor::create(Color4B(0, 0, 0, 0));
-	this->addChild(overLayer, 256, "pleaseWaitLayer");
+	Layer* overLayer = Layer::create();
+	this->addChild(overLayer, std::numeric_limits<int>::max(), "pleaseWaitLayer");
 
 	EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
 	listener->setSwallowTouches(true);
@@ -52,28 +57,32 @@ void CustomLayer::pleaseWaitLayer_set()
 	pleaseWaitAnimation_loop(overLayer);
 }
 
-void CustomLayer::pleaseWaitAnimation_loop(LayerColor* overLayer)
+void CustomLayer::pleaseWaitAnimation_loop(Layer* overLayer)
 {
-	Sprite* img = Sprite::create("HelloWorld.png");
+	Sprite* img = Sprite::createWithSpriteFrameName("HelloWorld.png");
 	img->setName("img");
-	img->setPosition(WIN_POS(0.5, 0.5));
+	img->setPosition(WIN_POS(0.5f, 0.5f));
 	img->runAction(PleaseWaitAnimation::loopAnimation());
 	overLayer->addChild(img);
 }
 
-void CustomLayer::pleaseWaitLayer_out()
+void CustomLayer::pleaseWaitLayer_out(const std::function<void()> callBackFunc)
 {
-	LayerColor* overLayer = static_cast<LayerColor*>( this->getChildByName("pleaseWaitLayer") );
+	Layer* overLayer = static_cast<Layer*>( this->getChildByName("pleaseWaitLayer") );
 
-	std::function<void()> func = [overLayer](){
+	std::function<void()> func = [overLayer, callBackFunc](){
 		Director::getInstance()->getEventDispatcher()->removeEventListenersForTarget(overLayer);
 		overLayer->setVisible(false);
+
+		if (callBackFunc) {
+			callBackFunc();
+		}
 	};
 
 	pleaseWaitAnimation_out(overLayer, func);
 }
 
-void CustomLayer::pleaseWaitAnimation_out(LayerColor* overLayer, std::function<void()> callBackFunc)
+void CustomLayer::pleaseWaitAnimation_out(const Layer* overLayer, const std::function<void()> callBackFunc)
 {
 	Sprite* img = (Sprite*)overLayer->getChildByName("img");
 	img->stopAllActions();
@@ -81,9 +90,9 @@ void CustomLayer::pleaseWaitAnimation_out(LayerColor* overLayer, std::function<v
 }
 
 
-void CustomLayer::pleaseWaitLayer_in(std::function<void()> callBackFunc)
+void CustomLayer::pleaseWaitLayer_in(const std::function<void()> callBackFunc)
 {
-	LayerColor* overLayer = static_cast<LayerColor*>( this->getChildByName("pleaseWaitLayer") );
+	Layer* overLayer = static_cast<Layer*>( this->getChildByName("pleaseWaitLayer") );
 
 	EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
 	listener->setSwallowTouches(true);
@@ -98,7 +107,7 @@ void CustomLayer::pleaseWaitLayer_in(std::function<void()> callBackFunc)
 	pleaseWaitAnimation_in(overLayer, callBackFunc);
 }
 
-void CustomLayer::pleaseWaitAnimation_in(LayerColor* overLayer, std::function<void()> callBackFunc)
+void CustomLayer::pleaseWaitAnimation_in(const Layer* overLayer, const std::function<void()> callBackFunc)
 {
 	Sprite* img = (Sprite*)overLayer->getChildByName("img");
 	img->stopAllActions();
@@ -122,24 +131,34 @@ void CustomLayer::sceneSetting(const std::string imageName)
 	{
 
 	}
-	pleaseWaitLayer_out();
-	dispose();
+	pleaseWaitLayer_out(nullptr);
+	dispose("CustomLayer");
 }
 
 void CustomLayer::gotoNextScene(Scene* nextScene)
 {
-	nextScene->retain();
-	pleaseWaitLayer_in(CC_CALLBACK_0(CustomLayer::replaceScene, this, nextScene));
+	_nextScene = nextScene;
+
+	// ここでretainしておかないと、アニメーションの最中に解放されてしまう。
+	_nextScene->retain();
+
+	pleaseWaitLayer_in(CC_CALLBACK_0(CustomLayer::replaceScene, this));
 }
 
-void CustomLayer::replaceScene(Scene* nextScene)
+void CustomLayer::replaceScene()
 {
-	Director::getInstance()->replaceScene(nextScene);
+	// gotoNextScene関数内でretainしたので、releaseする。ただし最初のSceneはretainしていないので例外。
+	if(Director::getInstance()->getRunningScene()->getReferenceCount() > 2)
+	{
+		Director::getInstance()->getRunningScene()->release();
+	}
+	
+	Director::getInstance()->replaceScene(_nextScene);
 }
 
-void CustomLayer::dispose()
+void CustomLayer::dispose(const std::string imageName)
 {
-	SpriteFrameCache::getInstance()->removeUnusedSpriteFrames();
-	Director::getInstance()->getTextureCache()->removeUnusedTextures();
+	SpriteFrameCache::getInstance()->removeSpriteFramesFromFile((imageName + ".plist"));
+	Director::getInstance()->getTextureCache()->removeTextureForKey(IMAGE_NAME(imageName));
 }
 

@@ -343,7 +343,72 @@
   jni/../../cocos2d/cocos/./ui/UIVBox.h \
   jni/../../cocos2d/cocos/./ui/UIRelativeBox.h \
   jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h \
-  jni/../../cocos2d/cocos/./ui/UIDeprecated.h
+  jni/../../cocos2d/cocos/./ui/UIDeprecated.h \
+  jni/../../Classes/common/GameMainScene.h \
+  jni/../../cocos2d/external/Box2D/../BOX2D/BOX2D.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Settings.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Draw.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Math.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Timer.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2CircleShape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2Shape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2BlockAllocator.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2Collision.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2EdgeShape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2ChainShape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2PolygonShape.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2BroadPhase.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2DynamicTree.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2GrowableStack.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2Distance.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2TimeOfImpact.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2Body.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2Fixture.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2WorldCallbacks.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2TimeStep.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2World.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Common/b2StackAllocator.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2ContactManager.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Contacts/b2Contact.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2DistanceJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2Joint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2FrictionJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2GearJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MotorJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MouseJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PulleyJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h \
+  jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h \
+  jni/../../Classes/common/GameMainUserController.h \
+  jni/../../Classes/common/GameMainModel.h \
+  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/random \
+  /Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/numeric \
+  jni/../../Classes/common/CustomPhysicsSprite.h \
+  jni/../../cocos2d/extensions/../extensions/cocos-ext.h \
+  jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h \
+  jni/../../cocos2d/extensions/../extensions/GUI/CCControlExtension/CCControlExtensions.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCScale9Sprite.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControl.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlButton.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCInvocation.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.h \
+  jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.h \
+  jni/../../cocos2d/extensions/../extensions/GUI/CCScrollView/CCScrollView.h \
+  jni/../../cocos2d/extensions/../extensions/GUI/CCScrollView/CCTableView.h \
+  jni/../../cocos2d/extensions/GUI/CCScrollView/CCTableViewCell.h \
+  jni/../../cocos2d/extensions/../extensions/GUI/CCEditBox/CCEditBox.h \
+  jni/../../cocos2d/extensions/../extensions/physics-nodes/CCPhysicsDebugNode.h \
+  jni/../../cocos2d/extensions/../extensions/physics-nodes/CCPhysicsSprite.h \
+  jni/../../cocos2d/extensions/../extensions/assets-manager/AssetsManager.h
 
 jni/../../Classes/AppMacros.h:
 
@@ -1034,3 +1099,133 @@ jni/../../cocos2d/cocos/./ui/UIRelativeBox.h:
 jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h:
 
 jni/../../cocos2d/cocos/./ui/UIDeprecated.h:
+
+jni/../../Classes/common/GameMainScene.h:
+
+jni/../../cocos2d/external/Box2D/../BOX2D/BOX2D.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Settings.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Draw.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Math.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2Timer.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2CircleShape.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2Shape.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2BlockAllocator.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2Collision.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2EdgeShape.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2ChainShape.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/Shapes/b2PolygonShape.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2BroadPhase.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2DynamicTree.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2GrowableStack.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2Distance.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Collision/b2TimeOfImpact.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2Body.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2Fixture.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2WorldCallbacks.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2TimeStep.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2World.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Common/b2StackAllocator.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/b2ContactManager.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Contacts/b2Contact.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2DistanceJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2Joint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2FrictionJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2GearJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MotorJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2MouseJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PrismaticJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2PulleyJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RevoluteJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2RopeJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h:
+
+jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h:
+
+jni/../../Classes/common/GameMainUserController.h:
+
+jni/../../Classes/common/GameMainModel.h:
+
+/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/random:
+
+/Users/sasaki/android-ndk-r9d/sources/cxx-stl/llvm-libc++/libcxx/include/numeric:
+
+jni/../../Classes/common/CustomPhysicsSprite.h:
+
+jni/../../cocos2d/extensions/../extensions/cocos-ext.h:
+
+jni/../../cocos2d/extensions/../extensions/ExtensionMacros.h:
+
+jni/../../cocos2d/extensions/../extensions/GUI/CCControlExtension/CCControlExtensions.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCScale9Sprite.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControl.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlButton.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCInvocation.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.h:
+
+jni/../../cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.h:
+
+jni/../../cocos2d/extensions/../extensions/GUI/CCScrollView/CCScrollView.h:
+
+jni/../../cocos2d/extensions/../extensions/GUI/CCScrollView/CCTableView.h:
+
+jni/../../cocos2d/extensions/GUI/CCScrollView/CCTableViewCell.h:
+
+jni/../../cocos2d/extensions/../extensions/GUI/CCEditBox/CCEditBox.h:
+
+jni/../../cocos2d/extensions/../extensions/physics-nodes/CCPhysicsDebugNode.h:
+
+jni/../../cocos2d/extensions/../extensions/physics-nodes/CCPhysicsSprite.h:
+
+jni/../../cocos2d/extensions/../extensions/assets-manager/AssetsManager.h:

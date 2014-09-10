@@ -1,3 +1,4 @@
+#include "GameConfig.h"
 #include "AppDelegate.h"
 #include "AppMacros.h"
 #include "common/GameTitleScene.h"
@@ -50,12 +51,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setDisplayStats(true);
 
     // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+    director->setAnimationInterval(APP_FPS);
 
 	// 各シーン共通使用のテクスチャを事前に読み込んでおく
-	//std::string imageName = "common";
-	//Texture2D* texture = Director::getInstance()->getTextureCache()->addImage(IMAGE_NAME(imageName));
-	//SpriteFrameCache::getInstance()->addSpriteFramesWithFile((imageName + ".plist"), texture);
+	std::string imageName = "Common";
+	Texture2D* texture = Director::getInstance()->getTextureCache()->addImage(IMAGE_NAME(imageName));
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile((imageName + ".plist"), texture);
 
     // create a scene. it's an autorelease object
     auto scene = GameTitleScene::createScene();
