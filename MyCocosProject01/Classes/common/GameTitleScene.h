@@ -26,6 +26,7 @@ public:
 
 	virtual void onEnterTransitionDidFinish() override;
 
+	GameTitleScene();
 	virtual ~GameTitleScene() override;
 
 
@@ -35,6 +36,8 @@ protected:
 
 
 private:
+
+	std::string textureAtlasName;
 
 	void createBG();
 	void createStartButton();

@@ -49,6 +49,7 @@ public:
 	bool isSelected() const;
 	BallTextureType getBallTextureType() const;
 
+	virtual void syncPhysicsTransform() const override;
 	virtual void draw(Renderer *renderer, const Mat4 &transform, uint32_t flags) override;
 
 	static CustomPhysicsSprite* createWithSpriteFrameName(const char *pszSpriteFrameName);
