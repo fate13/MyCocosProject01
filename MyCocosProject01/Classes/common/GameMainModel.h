@@ -30,6 +30,8 @@ public:
 		float initY;
 		float x;
 		float y;
+		float impulseX;
+		float impulseY;
 		int number;
 		bool isPresence;
 		bool isSelectEnable;

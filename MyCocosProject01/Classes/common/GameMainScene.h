@@ -46,6 +46,8 @@ protected:
 	
 private:
 
+	std::string textureAtlasName;
+
 	enum class ZOrder
 	{
 		Batch,
@@ -77,6 +79,7 @@ private:
 	Vector<CustomPhysicsSprite*> _destroyBallsList;
 	
 	//SpriteBatchNode* _gameMainBatchNode;
+	Layer* ll;
 
 	std::shared_ptr<GameMainUserController> _userController;
 

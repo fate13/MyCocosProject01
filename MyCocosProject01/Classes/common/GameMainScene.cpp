@@ -59,12 +59,6 @@ void GameMainScene::sceneSetting(const std::string imageName)
 		//_gameMainBatchNode =SpriteBatchNode::createWithTexture(texture);
 		//this->addChild(_gameMainBatchNode, static_cast<int>(ZOrder::Batch));
 
-		for (std::shared_ptr<GameMainModel::BallInfo> ballInfo : _userController->getModel()->getBallsInfoList())
-		{
-			CCLOG("");
-		}
-
-
 		initPhysics();
 		createBG();
 		createReturnButton();

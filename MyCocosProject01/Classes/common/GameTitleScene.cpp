@@ -13,7 +13,12 @@
 
 GameTitleScene::~GameTitleScene()
 {
-	dispose("GameTitleScene");
+	dispose(textureAtlasName);
+}
+
+GameTitleScene::GameTitleScene()
+{
+	textureAtlasName = "GameTitleScene";
 }
 
 Scene* GameTitleScene::createScene()
@@ -26,12 +31,12 @@ Scene* GameTitleScene::createScene()
 
 void GameTitleScene::onEnterTransitionDidFinish()
 {
-	loadTextureAtlasAsync("GameTitleScene");
+	loadTextureAtlasAsync(textureAtlasName);
 }
 
 void GameTitleScene::sceneSetting(const std::string imageName)
 {
-	if (imageName == "GameTitleScene")
+	if (imageName == textureAtlasName)
 	{
 		createBG();
 		createStartButton();

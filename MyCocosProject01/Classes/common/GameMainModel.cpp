@@ -69,13 +69,19 @@ void GameMainModel::createBallInfo(const int id)
 
 	if (id < BALLS_NUMBER)
 	{
-		ballInfo->initX = 0.5f + (0.25f + (float)id * 0.01) * cosf((float)(id + _randomR) * 44.0f * MATH_PI / 180.0f);
-		ballInfo->initY = 0.5f + (0.25f + (float)id * 0.01) * sinf((float)(id + _randomR) * 44.0f * MATH_PI / 180.0f) * 9.0f / 16.0f;
+		ballInfo->initX = 0.5f + (0.25f + (float)id * 0.01f) * cosf((float)(id + _randomR) * 44.0f * MATH_PI / 180.0f);
+		ballInfo->initY = 0.5f + (0.25f + (float)id * 0.01f) * sinf((float)(id + _randomR) * 44.0f * MATH_PI / 180.0f) * 9.0f / 16.0f;
+		ballInfo->impulseX = 0.0f;
+		ballInfo->impulseY = 0.0f;
 	}
 	else
 	{
-		ballInfo->initX = 0.5f + 0.7f * ((dist(engine) % 2)-0.5f) * 2.0f;
-		ballInfo->initY = 0.5f + 0.2f * ((dist(engine) % 2)-0.5f) * 2.0f;
+		ballInfo->initX = 0.5f + 0.6f * ((float)(dist(engine) % 2)-0.5f) * 2.0f;
+		ballInfo->initY = 0.5f + 0.1f * ((float)(dist(engine) % 2)-0.5f) * 2.0f;
+
+		float abs = (float)(dist(engine) % 5) / 16.0f + 0.25f;
+		ballInfo->impulseX = (ballInfo->initX < 0.5f) ? abs : -abs;
+		ballInfo->impulseY = (ballInfo->initY < 0.5f) ? -abs : abs;
 	}
 
 	ballInfo->x = ballInfo->initX;
