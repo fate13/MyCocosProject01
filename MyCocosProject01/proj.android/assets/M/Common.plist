@@ -4,18 +4,31 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>HelloWorld.png</key>
+            <key>Common_core.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{267,178}}</string>
+                <string>{{547,2},{264,264}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{267,178}}</string>
+                <string>{{0,0},{264,264}}</string>
                 <key>sourceSize</key>
-                <string>{267,178}</string>
+                <string>{264,264}</string>
+            </dict>
+            <key>Common_fin.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{543,523}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{543,523}}</string>
+                <key>sourceSize</key>
+                <string>{543,523}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -25,9 +38,9 @@
             <key>realTextureFileName</key>
             <string>Common.png</string>
             <key>size</key>
-            <string>{512,512}</string>
+            <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f5dfd49eded027a81bd3acba02583170:bffaf5b385ac816a2d42e03ed2788544:850199491236813674e0e6bea887abb5$</string>
+            <string>$TexturePacker:SmartUpdate:827541cbf404e154990e96094f8639f2:f23a80c33178197de4d666baabc94682:850199491236813674e0e6bea887abb5$</string>
             <key>textureFileName</key>
             <string>Common.png</string>
         </dict>

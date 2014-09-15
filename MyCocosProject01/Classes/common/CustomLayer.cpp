@@ -9,11 +9,12 @@
 #include "CustomLayer.h"
 #include "AppMacros.h"
 #include "PleaseWaitAnimation.h"
+#include "cocostudio/CocoStudio.h"
 #include <limits.h>
 
 CustomLayer::~CustomLayer()
 {
-	dispose("CustomLayer");
+	//dispose("CustomLayer");
 }
 
 Scene* CustomLayer::createScene()
@@ -31,8 +32,6 @@ bool CustomLayer::init()
 		return false;
 	}
 
-	pleaseWaitLayer_set();
-
 	return true;
 }
 
@@ -46,6 +45,10 @@ void CustomLayer::pleaseWaitLayer_set()
 	Layer* overLayer = Layer::create();
 	this->addChild(overLayer, std::numeric_limits<int>::max(), "pleaseWaitLayer");
 
+	overLayer->addChild( cocostudio::GUIReader::getInstance()->widgetFromJsonFile("Common.ExportJson") );
+
+	cocostudio::ActionManagerEx::getInstance()->playActionByName("Common.ExportJson", "pleaseWait_loop");
+
 	EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
 	listener->setSwallowTouches(true);
 	listener->onTouchBegan = [](Touch *touch, Event *event)
@@ -53,21 +56,17 @@ void CustomLayer::pleaseWaitLayer_set()
 		return true;
 	};
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, overLayer);
-
-	pleaseWaitAnimation_loop(overLayer);
 }
 
 void CustomLayer::pleaseWaitAnimation_loop(Layer* overLayer)
 {
-	Sprite* img = Sprite::createWithSpriteFrameName("HelloWorld.png");
-	img->setName("img");
-	img->setPosition(WIN_POS(0.5f, 0.5f));
-	img->runAction(PleaseWaitAnimation::loopAnimation());
-	overLayer->addChild(img);
+
 }
 
 void CustomLayer::pleaseWaitLayer_out(const std::function<void()> callBackFunc)
 {
+	cocostudio::ActionManagerEx::getInstance()->getActionByName("Common.ExportJson", "pleaseWait_loop")->stop();
+
 	Layer* overLayer = static_cast<Layer*>( this->getChildByName("pleaseWaitLayer") );
 
 	std::function<void()> func = [overLayer, callBackFunc](){
@@ -79,14 +78,14 @@ void CustomLayer::pleaseWaitLayer_out(const std::function<void()> callBackFunc)
 		}
 	};
 
-	pleaseWaitAnimation_out(overLayer, func);
+	CallFunc* callFunc = CallFunc::create(func);
+
+	cocostudio::ActionManagerEx::getInstance()->playActionByName("Common.ExportJson", "pleaseWait_out", callFunc);
 }
 
 void CustomLayer::pleaseWaitAnimation_out(const Layer* overLayer, const std::function<void()> callBackFunc)
 {
-	Sprite* img = (Sprite*)overLayer->getChildByName("img");
-	img->stopAllActions();
-	img->runAction(PleaseWaitAnimation::outAnimation(callBackFunc));
+
 }
 
 
@@ -104,7 +103,9 @@ void CustomLayer::pleaseWaitLayer_in(const std::function<void()> callBackFunc)
 
 	overLayer->setVisible(true);
 
-	pleaseWaitAnimation_in(overLayer, callBackFunc);
+	CallFunc* callFunc = CallFunc::create(callBackFunc);
+
+	cocostudio::ActionManagerEx::getInstance()->playActionByName("Common.ExportJson", "pleaseWait_in", callFunc);
 }
 
 void CustomLayer::pleaseWaitAnimation_in(const Layer* overLayer, const std::function<void()> callBackFunc)
@@ -116,6 +117,8 @@ void CustomLayer::pleaseWaitAnimation_in(const Layer* overLayer, const std::func
 
 void CustomLayer::loadTextureAtlasAsync(const std::string imageName)
 {
+	pleaseWaitLayer_set();
+
 	Director::getInstance()->getTextureCache()->addImageAsync(IMAGE_NAME(imageName), CC_CALLBACK_1(CustomLayer::loadTextureAtlasAsyncComplete, this, imageName));
 }
 

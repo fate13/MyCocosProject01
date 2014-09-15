@@ -36,6 +36,7 @@ GameMainScene::GameMainScene()
 	_dustSelectedFlag = false;
 	_pauseFlag = false;
 	_startTimerFlag = false;
+	CustomPhysicsSprite::GM = 0.0f;
 }
 
 Scene* GameMainScene::createScene()
@@ -82,6 +83,7 @@ void GameMainScene::initPhysics()
 
 void GameMainScene::startGame()
 {
+	CustomPhysicsSprite::GM = GM_APPLY_FORCE;
 	createCountDown();
 	this->scheduleUpdate();
 	setEventListener();
@@ -423,7 +425,7 @@ void GameMainScene::destroyBall(CustomPhysicsSprite* ball)
 
 void GameMainScene::createReturnButton()
 {
-	Sprite* btn = Sprite::createWithSpriteFrameName("HelloWorld.png");
+	Sprite* btn = Sprite::create("Physics/HelloWorld.png");
 	btn->setScale(0.5f);
 	btn->setPosition(WIN_POS(0.1f, 0.1f));
 	this->addChild(btn, 20);
