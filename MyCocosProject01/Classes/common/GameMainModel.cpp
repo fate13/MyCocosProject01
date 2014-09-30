@@ -121,6 +121,24 @@ void GameMainModel::receiveDtAndBallsPosition(const float dt, const std::vector<
 {
 	_timeLeft -= dt;
 
+	if (_timeLeft < 0.0f) {
+		setGameStatus(GameStatus::TimeUp);
+
+		if (_gameStatus == GameStatus::TimeUp && _gamePrevStatus == GameStatus::Playing)
+		{
+			allBallsDisabled();
+		}
+
+		_timeLeft = 0.0f;
+		_presentPoints = 0;
+
+		return;
+	}
+	else if (_timeLeft < DEFAULT_TIME_LEFT)
+	{
+		setGameStatus(GameStatus::Playing);
+	}
+
 	int size = ballsPosition.size();
 	for (int i = 0; i < size; ++i) {
 		_ballsInfoList.at(i)->x = ballsPosition.at(i).first;
@@ -129,15 +147,6 @@ void GameMainModel::receiveDtAndBallsPosition(const float dt, const std::vector<
 
 	if (_touchFlag)
 		checkLengthSelectedBallToRest();
-
-	if (_timeLeft < 0.0f) {
-		setGameStatus(GameStatus::TimeUp);
-		_timeLeft = 0.0f;
-	}
-	else if (_timeLeft < DEFAULT_TIME_LEFT)
-	{
-		setGameStatus(GameStatus::Playing);
-	}
 }
 
 void GameMainModel::touchBall(const int id)
@@ -169,7 +178,7 @@ void GameMainModel::touchBall(const int id)
 	}
 	else // _presentPointsに加算
 	{
-		_ballsInfoList.at(id)->isSelected	= true;
+		_ballsInfoList.at(id)->isSelected = true;
 		_presentPoints += _ballsInfoList.at(id)->number;
 		_selectedBallsInfoList.push_back(_ballsInfoList.at(id));
 	}
@@ -257,17 +266,15 @@ void GameMainModel::calculateTotalPoints()
 	if (_gameStatus == GameStatus::TimeUp)
 		return;
 	
-	if (_presentPoints == 10)
-		_totalPoints += (_presentPoints * _selectedBallsInfoList.size());
-	else
-		_totalPoints += _presentPoints;
+
+	_totalPoints += this->getAddingPoints();
 }
 
 void GameMainModel::checkLengthSelectedBallToRest()
 {
-	std::shared_ptr<BallInfo> lastSelectedBollInfo = _selectedBallsInfoList.at(_selectedBallsInfoList.size() - 1);
-	float lX = lastSelectedBollInfo->x;
-	float lY = lastSelectedBollInfo->y;
+	std::shared_ptr<BallInfo> lastSelectedBallInfo = _selectedBallsInfoList.at(_selectedBallsInfoList.size() - 1);
+	float lX = lastSelectedBallInfo->x;
+	float lY = lastSelectedBallInfo->y;
 
 	for (int i = 0; i < _ballsNumber; ++i) {
 
@@ -312,6 +319,15 @@ void GameMainModel::enterDust()
 				_ballsInfoList.at(i)->isSelected = false;
 		}
 	}
+}
+
+void GameMainModel::allBallsDisabled()
+{
+	for (int i = 0; i < _ballsNumber; ++i)
+	{
+		_ballsInfoList.at(i)->isSelectEnable = false;
+	}
+
 }
 
 void GameMainModel::outDust()
@@ -371,6 +387,18 @@ bool GameMainModel::isDustSelected() const
 int GameMainModel::getPresentPoints() const
 {
 	return _presentPoints;
+}
+
+int GameMainModel::getAddingPoints() const
+{
+	int points;
+
+	if (_presentPoints == 10)
+		points = (_presentPoints * _selectedBallsInfoList.size());
+	else
+		points = _presentPoints;
+
+	return points;
 }
 
 int GameMainModel::getTotalPoints() const

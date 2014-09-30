@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>BG.png</key>
+            <key>GameMainScene_BG.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{1152,2048}}</string>
@@ -17,10 +17,10 @@
                 <key>sourceSize</key>
                 <string>{1152,2048}</string>
             </dict>
-            <key>ball1_disabled.png</key>
+            <key>GameMainScene_ball1_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2536},{180,180}}</string>
+                <string>{{521,2052},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -30,10 +30,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball1_normal.png</key>
+            <key>GameMainScene_ball1_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2718},{180,180}}</string>
+                <string>{{521,2234},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -43,10 +43,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball1_selected.png</key>
+            <key>GameMainScene_ball1_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2900},{180,180}}</string>
+                <string>{{521,2416},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -56,10 +56,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball2_disabled.png</key>
+            <key>GameMainScene_ball2_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,3082},{180,180}}</string>
+                <string>{{703,2052},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -69,10 +69,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball2_normal.png</key>
+            <key>GameMainScene_ball2_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,3264},{180,180}}</string>
+                <string>{{703,2234},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -82,10 +82,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball2_selected.png</key>
+            <key>GameMainScene_ball2_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,3446},{180,180}}</string>
+                <string>{{703,2416},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -95,10 +95,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball3_disabled.png</key>
+            <key>GameMainScene_ball3_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,3628},{180,180}}</string>
+                <string>{{518,2912},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -108,10 +108,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball3_normal.png</key>
+            <key>GameMainScene_ball3_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,3810},{180,180}}</string>
+                <string>{{518,3094},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -121,10 +121,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball3_selected.png</key>
+            <key>GameMainScene_ball3_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,2536},{180,180}}</string>
+                <string>{{518,3276},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -134,10 +134,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball4_disabled.png</key>
+            <key>GameMainScene_ball4_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{244,2052},{180,180}}</string>
+                <string>{{518,3458},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -147,10 +147,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball4_normal.png</key>
+            <key>GameMainScene_ball4_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{244,2234},{180,180}}</string>
+                <string>{{518,3640},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -160,10 +160,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball4_selected.png</key>
+            <key>GameMainScene_ball4_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,2718},{180,180}}</string>
+                <string>{{700,2912},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -173,10 +173,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball5_disabled.png</key>
+            <key>GameMainScene_ball5_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,2900},{180,180}}</string>
+                <string>{{707,2598},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -186,10 +186,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball5_normal.png</key>
+            <key>GameMainScene_ball5_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,3082},{180,180}}</string>
+                <string>{{885,2052},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -199,10 +199,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball5_selected.png</key>
+            <key>GameMainScene_ball5_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,3264},{180,180}}</string>
+                <string>{{885,2234},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -212,10 +212,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball6_disabled.png</key>
+            <key>GameMainScene_ball6_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,3446},{180,180}}</string>
+                <string>{{885,2416},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -225,10 +225,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball6_normal.png</key>
+            <key>GameMainScene_ball6_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,3628},{180,180}}</string>
+                <string>{{700,3094},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -238,10 +238,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball6_selected.png</key>
+            <key>GameMainScene_ball6_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,3810},{180,180}}</string>
+                <string>{{700,3276},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -251,10 +251,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball7_disabled.png</key>
+            <key>GameMainScene_ball7_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{366,2416},{180,180}}</string>
+                <string>{{700,3458},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -264,10 +264,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball7_normal.png</key>
+            <key>GameMainScene_ball7_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{426,2052},{180,180}}</string>
+                <string>{{700,3640},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -277,10 +277,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball7_selected.png</key>
+            <key>GameMainScene_ball7_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{426,2234},{180,180}}</string>
+                <string>{{727,3822},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -290,10 +290,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball8_disabled.png</key>
+            <key>GameMainScene_ball8_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{366,2598},{180,180}}</string>
+                <string>{{882,2780},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -303,10 +303,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball8_normal.png</key>
+            <key>GameMainScene_ball8_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{366,2780},{180,180}}</string>
+                <string>{{889,2598},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -316,10 +316,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball8_selected.png</key>
+            <key>GameMainScene_ball8_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{366,2962},{180,180}}</string>
+                <string>{{1067,2052},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -329,10 +329,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball9_disabled.png</key>
+            <key>GameMainScene_ball9_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{366,3144},{180,180}}</string>
+                <string>{{1067,2234},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -342,10 +342,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball9_normal.png</key>
+            <key>GameMainScene_ball9_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{366,3326},{180,180}}</string>
+                <string>{{1067,2416},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -355,10 +355,10 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>ball9_selected.png</key>
+            <key>GameMainScene_ball9_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{366,3508},{180,180}}</string>
+                <string>{{882,2962},{180,180}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -368,31 +368,96 @@
                 <key>sourceSize</key>
                 <string>{180,180}</string>
             </dict>
-            <key>dust_normal.png</key>
+            <key>GameMainScene_dust_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2052},{240,240}}</string>
+                <string>{{219,2052},{300,301}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{240,240}}</string>
+                <string>{{0,0},{300,301}}</string>
                 <key>sourceSize</key>
-                <string>{240,240}</string>
+                <string>{300,301}</string>
             </dict>
-            <key>dust_selected.png</key>
+            <key>GameMainScene_dust_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2294},{240,240}}</string>
+                <string>{{219,2355},{300,301}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{240,240}}</string>
+                <string>{{0,0},{300,301}}</string>
                 <key>sourceSize</key>
-                <string>{240,240}</string>
+                <string>{300,301}</string>
+            </dict>
+            <key>GameMainScene_go.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,3856},{723,215}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{723,215}}</string>
+                <key>sourceSize</key>
+                <string>{723,215}</string>
+            </dict>
+            <key>GameMainScene_pause_normal.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{219,2658},{242,252}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{242,252}}</string>
+                <key>sourceSize</key>
+                <string>{242,252}</string>
+            </dict>
+            <key>GameMainScene_pause_selected.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{463,2658},{242,252}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{242,252}}</string>
+                <key>sourceSize</key>
+                <string>{242,252}</string>
+            </dict>
+            <key>GameMainScene_ready.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2052},{956,215}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{956,215}}</string>
+                <key>sourceSize</key>
+                <string>{956,215}</string>
+            </dict>
+            <key>GameMainScene_timeup.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,3010},{844,514}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{844,514}}</string>
+                <key>sourceSize</key>
+                <string>{844,514}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -404,7 +469,7 @@
             <key>size</key>
             <string>{4096,4096}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b85e2f0767aa8670cee7d421088ed0ff:4914cd1ba194ebc738d2b91d101423e5:0b94b986b793158c7d756500364012fa$</string>
+            <string>$TexturePacker:SmartUpdate:263ba3ab1850181e53b19c94628aa674:9250867c4dd9dff28150e9fc2806a02d:0b94b986b793158c7d756500364012fa$</string>
             <key>textureFileName</key>
             <string>GameMainScene.png</string>
         </dict>

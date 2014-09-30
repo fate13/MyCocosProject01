@@ -103,7 +103,7 @@ void GameMainUserController::sendDtAndBalls(const float dt, const Vector<CustomP
 }
 
 
-bool GameMainUserController::circleContainPoint(Sprite* circle, Vec2 touchPoint)
+bool GameMainUserController::circleContainPoint(Node* circle, Vec2 touchPoint)
 {
 	float cX = circle->getPosition().x;
 	float cY = circle->getPosition().y;

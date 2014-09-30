@@ -56,6 +56,7 @@ public:
 	std::vector<std::shared_ptr<BallInfo>> getSelectedBallsInfoList() const;
 	std::vector<std::shared_ptr<BallInfo>> getVanishAnimationBallsInfoList() const;
 	int getPresentPoints() const;
+	int getAddingPoints() const;
 	int getTotalPoints() const;
 	bool isDustSelected() const;
 	int getTimeLeft() const;
@@ -93,6 +94,7 @@ private:
 	void createBallInfo(const int id);
 	void checkLengthSelectedBallToRest();
 	void calculateTotalPoints();
+	void allBallsDisabled();
 
 	int _randomR;
 };

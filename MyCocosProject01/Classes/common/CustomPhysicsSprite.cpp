@@ -37,7 +37,7 @@ CustomPhysicsSprite* CustomPhysicsSprite::createWithSpriteFrameName(const char *
 CustomPhysicsSprite* CustomPhysicsSprite::createWithBallNumber(const int ballNumber)
 {
     char ballImageName[100];
-	sprintf(ballImageName, "ball%d_normal.png", ballNumber);
+	sprintf(ballImageName, "GameMainScene_ball%d_normal.png", ballNumber);
 
 	CustomPhysicsSprite* ball = CustomPhysicsSprite::createWithSpriteFrameName(ballImageName);
 
@@ -48,22 +48,6 @@ void CustomPhysicsSprite::setUp(b2World* world, const std::shared_ptr<GameMainMo
 {
 	Vec2 position = WIN_POS(ballInfo->initX, ballInfo->initY);
 
-//	b2BodyDef catBodyDef;
-//	catBodyDef.type = b2_staticBody;
-//	catBodyDef.position.Set(catPosition.x / PTM_RATIO, catPosition.y / PTM_RATIO);
-//	catBodyDef.userData = pCat;
-//	catBody = world->CreateBody(&catBodyDef);
-//
-//	b2CircleShape catShape;
-//	catShape.m_radius = pCat->getContentSize().width * 0.4 / PTM_RATIO;
-//
-//	b2FixtureDef catFixturedef;
-//	catFixturedef.shape = &catShape;
-//	catFixturedef.density = 1;
-//	catFixturedef.friction = 0.3;
-//	catBody->CreateFixture(&catFixturedef);
-
-
 	b2BodyDef myDef;
 	myDef.type = b2_dynamicBody;
 	myDef.position.Set(position.x / PTM_RATIO, position.y / PTM_RATIO);
@@ -71,18 +55,9 @@ void CustomPhysicsSprite::setUp(b2World* world, const std::shared_ptr<GameMainMo
 
 	b2Body* myBody = world->CreateBody(&myDef);
 
-//	gbox2d::GB2ShapeCache* sc = gbox2d::GB2ShapeCache::getInstance();
-//	sc->addFixturesToBody(myBody, "ball");
-//	this->setAnchorPoint(sc->anchorPointForShape("ball"));
-
-		b2CircleShape catShape;
-		catShape.m_radius = this->getContentSize().width * 0.5 / PTM_RATIO;
-
-		b2FixtureDef catFixturedef;
-		catFixturedef.shape = &catShape;
-		catFixturedef.density = 1;
-		catFixturedef.friction = 0.3;
-		myBody->CreateFixture(&catFixturedef);
+	gbox2d::GB2ShapeCache* sc = gbox2d::GB2ShapeCache::getInstance();
+	sc->addFixturesToBody(myBody, "GameMainScene_ball");
+	this->setAnchorPoint(sc->anchorPointForShape("GameMainScene_ball"));
 
 	this->setB2Body(myBody);
 	this->setPTMRatio(PTM_RATIO);
@@ -107,17 +82,17 @@ void CustomPhysicsSprite::changeTexture(const BallTextureType ballTextureType)
 
 	switch (ballTextureType) {
 		case BallTextureType::Normal:
-			sprintf(ballImageName, "ball%d_normal.png", _number);
+			sprintf(ballImageName, "GameMainScene_ball%d_normal.png", _number);
 			this->setSpriteFrame(ballImageName);
 			break;
 
 		case BallTextureType::Selected:
-			sprintf(ballImageName, "ball%d_selected.png", _number);
+			sprintf(ballImageName, "GameMainScene_ball%d_selected.png", _number);
 			this->setSpriteFrame(ballImageName);
 			break;
 
 		case BallTextureType::Disabled:
-			sprintf(ballImageName, "ball%d_disabled.png", _number);
+			sprintf(ballImageName, "GameMainScene_ball%d_disabled.png", _number);
 			this->setSpriteFrame(ballImageName);
 			break;
 

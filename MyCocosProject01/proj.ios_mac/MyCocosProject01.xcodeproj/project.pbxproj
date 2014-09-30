@@ -65,6 +65,7 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		EA1660A319D32B6300A44460 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = EA1660A219D32B6300A44460 /* fonts */; };
 		EA5A2EB819B52ACF001B82E3 /* Physics in Resources */ = {isa = PBXBuildFile; fileRef = EA5A2EB719B52ACF001B82E3 /* Physics */; };
 		EA98C7F119C57AAD00DB9310 /* JsonAnimation in Resources */ = {isa = PBXBuildFile; fileRef = EA98C7F019C57AAD00DB9310 /* JsonAnimation */; };
 		EAB7270E19B76E6E007BEB6A /* GB2ShapeCache-x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB7270C19B76E6E007BEB6A /* GB2ShapeCache-x.cpp */; };
@@ -273,6 +274,7 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		EA1660A219D32B6300A44460 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		EA5A2EB719B52ACF001B82E3 /* Physics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Physics; sourceTree = "<group>"; };
 		EA98C7F019C57AAD00DB9310 /* JsonAnimation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JsonAnimation; sourceTree = "<group>"; };
 		EAB7270C19B76E6E007BEB6A /* GB2ShapeCache-x.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "GB2ShapeCache-x.cpp"; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA1660A219D32B6300A44460 /* fonts */,
 				EA98C7F019C57AAD00DB9310 /* JsonAnimation */,
 				EA5A2EB719B52ACF001B82E3 /* Physics */,
 				EAE491BA19B28F93003EA0F3 /* L */,
@@ -708,6 +711,7 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				EA1660A319D32B6300A44460 /* fonts in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				EAE491BE19B28F93003EA0F3 /* M in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,

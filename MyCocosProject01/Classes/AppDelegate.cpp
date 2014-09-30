@@ -45,7 +45,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 		director->setContentScaleFactor(smallResource.size.height / designResolutionSize.height);
 		FileUtils::getInstance()->addSearchPath(smallResource.directory);
 	}
+
 	FileUtils::getInstance()->addSearchPath("JsonAnimation");
+
+	FileUtils::getInstance()->addSearchPath("fonts");
 
 
 	// turn on display FPS

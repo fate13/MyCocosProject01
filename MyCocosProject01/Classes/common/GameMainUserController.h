@@ -37,7 +37,7 @@ private:
 	
 	std::shared_ptr<GameMainModel> _model;
 
-	bool circleContainPoint(Sprite* circle, Vec2 touchPoint);
+	bool circleContainPoint(Node* circle, Vec2 touchPoint);
 };
 
 #endif /* defined(__MyCocosProject01__GameMainUserController__) */

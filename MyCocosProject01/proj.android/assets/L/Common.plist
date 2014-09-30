@@ -4,31 +4,70 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Common_core.png</key>
+            <key>Common_center0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{981,2},{475,475}}</string>
+                <string>{{1559,280},{244,224}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{475,475}}</string>
+                <string>{{0,0},{244,224}}</string>
                 <key>sourceSize</key>
-                <string>{475,475}</string>
+                <string>{244,224}</string>
+            </dict>
+            <key>Common_center1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1559,2},{276,276}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{276,276}}</string>
+                <key>sourceSize</key>
+                <string>{276,276}</string>
+            </dict>
+            <key>Common_core.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1004,2},{553,553}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{553,553}}</string>
+                <key>sourceSize</key>
+                <string>{553,553}</string>
             </dict>
             <key>Common_fin.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{977,942}}</string>
+                <string>{{2,2},{1000,974}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{977,942}}</string>
+                <string>{{0,0},{1000,974}}</string>
                 <key>sourceSize</key>
-                <string>{977,942}</string>
+                <string>{1000,974}</string>
+            </dict>
+            <key>Common_finMark.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1837,2},{74,143}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{74,143}}</string>
+                <key>sourceSize</key>
+                <string>{74,143}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -40,7 +79,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:827541cbf404e154990e96094f8639f2:f23a80c33178197de4d666baabc94682:850199491236813674e0e6bea887abb5$</string>
+            <string>$TexturePacker:SmartUpdate:2f2510a06f7fdc3fd0980612f5dd1507:f3e99fd41fc37a29df7429d64fd89c5e:850199491236813674e0e6bea887abb5$</string>
             <key>textureFileName</key>
             <string>Common.png</string>
         </dict>
