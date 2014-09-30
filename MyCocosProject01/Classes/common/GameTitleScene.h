@@ -39,9 +39,8 @@ private:
 
 	std::string textureAtlasName;
 
-	void createBG();
-	void createStartButton();
-	void touchEvent_startButton(Ref *pSender, ui::Widget::TouchEventType type);	
+	void createUI();
+	void touchEvent_playButton(Ref* pSender, ui::Widget::TouchEventType type);
 
 };
 

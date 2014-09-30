@@ -381,7 +381,33 @@
   jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WeldJoint.h \
   jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h \
   jni/../../Classes/common/GameMainScene.h \
-  jni/../../Classes/common/CustomLayer.h
+  jni/../../Classes/common/CustomLayer.h \
+  jni/../../cocos2d/cocos/./ui/CocosGUI.h \
+  jni/../../cocos2d/cocos/./ui/UIWidget.h \
+  jni/../../cocos2d/cocos/./ui/CCProtectedNode.h \
+  jni/../../cocos2d/cocos/./ui/UILayoutParameter.h \
+  jni/../../cocos2d/cocos/./ui/GUIDefine.h \
+  jni/../../cocos2d/cocos/./base/ObjectFactory.h \
+  jni/../../cocos2d/cocos/./ui/UILayout.h \
+  jni/../../cocos2d/cocos/./ui/UIButton.h \
+  jni/../../cocos2d/cocos/./ui/UICheckBox.h \
+  jni/../../cocos2d/cocos/./ui/UIImageView.h \
+  jni/../../cocos2d/cocos/./ui/UIText.h \
+  jni/../../cocos2d/cocos/./ui/UITextAtlas.h \
+  jni/../../cocos2d/cocos/./ui/UILoadingBar.h \
+  jni/../../cocos2d/cocos/./ui/UIScrollView.h \
+  jni/../../cocos2d/cocos/./ui/UIListView.h \
+  jni/../../cocos2d/cocos/./ui/UISlider.h \
+  jni/../../cocos2d/cocos/./ui/UITextField.h \
+  jni/../../cocos2d/cocos/./ui/UITextBMFont.h \
+  jni/../../cocos2d/cocos/./ui/UIPageView.h \
+  jni/../../cocos2d/cocos/./ui/UIHelper.h \
+  jni/../../cocos2d/cocos/./ui/UIRichText.h \
+  jni/../../cocos2d/cocos/./ui/UIHBox.h \
+  jni/../../cocos2d/cocos/./ui/UIVBox.h \
+  jni/../../cocos2d/cocos/./ui/UIRelativeBox.h \
+  jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h \
+  jni/../../cocos2d/cocos/./ui/UIDeprecated.h
 
 jni/../../Classes/common/GameMainUserController.h:
 
@@ -1146,3 +1172,55 @@ jni/../../cocos2d/external/Box2D/../Box2D/Dynamics/Joints/b2WheelJoint.h:
 jni/../../Classes/common/GameMainScene.h:
 
 jni/../../Classes/common/CustomLayer.h:
+
+jni/../../cocos2d/cocos/./ui/CocosGUI.h:
+
+jni/../../cocos2d/cocos/./ui/UIWidget.h:
+
+jni/../../cocos2d/cocos/./ui/CCProtectedNode.h:
+
+jni/../../cocos2d/cocos/./ui/UILayoutParameter.h:
+
+jni/../../cocos2d/cocos/./ui/GUIDefine.h:
+
+jni/../../cocos2d/cocos/./base/ObjectFactory.h:
+
+jni/../../cocos2d/cocos/./ui/UILayout.h:
+
+jni/../../cocos2d/cocos/./ui/UIButton.h:
+
+jni/../../cocos2d/cocos/./ui/UICheckBox.h:
+
+jni/../../cocos2d/cocos/./ui/UIImageView.h:
+
+jni/../../cocos2d/cocos/./ui/UIText.h:
+
+jni/../../cocos2d/cocos/./ui/UITextAtlas.h:
+
+jni/../../cocos2d/cocos/./ui/UILoadingBar.h:
+
+jni/../../cocos2d/cocos/./ui/UIScrollView.h:
+
+jni/../../cocos2d/cocos/./ui/UIListView.h:
+
+jni/../../cocos2d/cocos/./ui/UISlider.h:
+
+jni/../../cocos2d/cocos/./ui/UITextField.h:
+
+jni/../../cocos2d/cocos/./ui/UITextBMFont.h:
+
+jni/../../cocos2d/cocos/./ui/UIPageView.h:
+
+jni/../../cocos2d/cocos/./ui/UIHelper.h:
+
+jni/../../cocos2d/cocos/./ui/UIRichText.h:
+
+jni/../../cocos2d/cocos/./ui/UIHBox.h:
+
+jni/../../cocos2d/cocos/./ui/UIVBox.h:
+
+jni/../../cocos2d/cocos/./ui/UIRelativeBox.h:
+
+jni/../../cocos2d/cocos/./ui/UIVideoPlayer.h:
+
+jni/../../cocos2d/cocos/./ui/UIDeprecated.h:

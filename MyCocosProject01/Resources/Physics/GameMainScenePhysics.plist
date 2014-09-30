@@ -15,7 +15,7 @@
         <key>bodies</key>
 		<dict>
 
-			<key>BG</key>
+			<key>GameMainScene_BG</key>
 			<dict>
 				<key>anchorpoint</key>
                 <string>{ 0.5000,0.5000 }</string>
@@ -37,55 +37,55 @@
 						<array>
 							<array>	
 								<string>{ 520.000,167.000 }</string>	
-								<string>{ 520.000,-171.000 }</string>	
+								<string>{ 520.000,-169.000 }</string>	
 								<string>{ 570.000,-569.000 }</string>	
 								<string>{ 570.000,167.000 }</string>
 							</array>
 							<array>	
 								<string>{ 570.000,169.000 }</string>	
 								<string>{ 570.000,569.000 }</string>	
-								<string>{ 153.000,425.000 }</string>	
-								<string>{ 520.000,171.000 }</string>
+								<string>{ 148.000,421.000 }</string>	
+								<string>{ 520.000,169.000 }</string>
 							</array>
 							<array>	
 								<string>{ 570.000,569.000 }</string>	
 								<string>{ -570.000,569.000 }</string>	
-								<string>{ -153.000,425.000 }</string>	
-								<string>{ 153.000,425.000 }</string>
+								<string>{ -149.000,421.000 }</string>	
+								<string>{ 148.000,421.000 }</string>
 							</array>
 							<array>	
-								<string>{ -153.000,425.000 }</string>	
+								<string>{ -149.000,421.000 }</string>	
 								<string>{ -570.000,569.000 }</string>	
-								<string>{ -520.000,171.000 }</string>
+								<string>{ -520.000,169.000 }</string>
 							</array>
 							<array>	
-								<string>{ 520.000,-171.000 }</string>	
-								<string>{ 153.000,-425.000 }</string>	
+								<string>{ 520.000,-169.000 }</string>	
+								<string>{ 148.000,-423.000 }</string>	
 								<string>{ 570.000,-569.000 }</string>
 							</array>
 							<array>	
 								<string>{ 570.000,-569.000 }</string>	
-								<string>{ 153.000,-425.000 }</string>	
-								<string>{ -152.000,-425.000 }</string>	
+								<string>{ 148.000,-423.000 }</string>	
+								<string>{ -149.000,-423.000 }</string>	
 								<string>{ -570.000,-569.000 }</string>
 							</array>
 							<array>	
-								<string>{ -152.000,-425.000 }</string>	
-								<string>{ -520.000,-171.000 }</string>	
+								<string>{ -149.000,-423.000 }</string>	
+								<string>{ -520.000,-169.000 }</string>	
 								<string>{ -570.000,-569.000 }</string>
 							</array>
 							<array>	
 								<string>{ -570.000,569.000 }</string>	
 								<string>{ -570.000,-569.000 }</string>	
-								<string>{ -520.000,-171.000 }</string>	
-								<string>{ -520.000,171.000 }</string>
+								<string>{ -520.000,-169.000 }</string>	
+								<string>{ -520.000,169.000 }</string>
 							</array>
 						</array>
                     </dict>
 					<dict>
-                        <key>density</key> <real>100</real>
-                        <key>friction</key> <real>0.1</real>
-                        <key>restitution</key> <real>0.5</real>
+                        <key>density</key> <real>1</real>
+                        <key>friction</key> <real>1</real>
+                        <key>restitution</key> <real>0.1</real>
                         <key>filter_categoryBits</key> <integer>1</integer>
                         <key>filter_groupIndex</key> <integer>0</integer>
                         <key>filter_maskBits</key> <integer>65535</integer>
@@ -95,13 +95,13 @@
 
                          <key>circle</key>
                          <dict>
-                             <key>radius</key> <real>66.000</real>
+                             <key>radius</key> <real>84.000</real>
                              <key>position</key> <string>{ -0.202,-0.096 }</string>
                          </dict>
                     </dict>
 				</array>
 			</dict>
-			<key>ball</key>
+			<key>GameMainScene_ball</key>
 			<dict>
 				<key>anchorpoint</key>
                 <string>{ 0.5000,0.5000 }</string>

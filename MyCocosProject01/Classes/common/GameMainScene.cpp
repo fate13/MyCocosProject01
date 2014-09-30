@@ -13,6 +13,7 @@
 #include "GameTitleScene.h"
 #include "extensions/cocos-ext.h"
 #include "physicsEditor/GB2ShapeCache-x.h"
+#include "cocostudio/CocoStudio.h"
 
 
 GameMainScene::~GameMainScene()
@@ -36,6 +37,7 @@ GameMainScene::GameMainScene()
 	_dustSelectedFlag = false;
 	_pauseFlag = false;
 	_startTimerFlag = false;
+	CustomPhysicsSprite::GM = 0.0f;
 }
 
 Scene* GameMainScene::createScene()
@@ -61,11 +63,8 @@ void GameMainScene::sceneSetting(const std::string imageName)
 
 		initPhysics();
 		createBG();
-		createReturnButton();
-		createDust();
+		createPauseButton();
 		createBallsInInit();
-		createPoints();
-		createTimer();
 	}
 
 	pleaseWaitLayer_out(CC_CALLBACK_0(GameMainScene::startGame, this));
@@ -82,33 +81,43 @@ void GameMainScene::initPhysics()
 
 void GameMainScene::startGame()
 {
+	CustomPhysicsSprite::GM = GM_APPLY_FORCE;
 	createCountDown();
 	this->scheduleUpdate();
-	setEventListener();
 }
 
 void GameMainScene::createCountDown()
 {
-	Layer* layer = Layer::create();
-	this->addChild(layer, static_cast<int>(ZOrder::CountDown), static_cast<int>(Tag::CountDown));
+	//LayerColor* layer = LayerColor::create(Color4B(0, 0, 0, 128));
+	//this->addChild(layer, static_cast<int>(ZOrder::CountDown), static_cast<int>(Tag::CountDown));
 
-	EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
-	listener->setSwallowTouches(true);
-	listener->onTouchBegan = [](Touch *touch, Event *event)
-	{
-		return true;
-	};
-	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, layer);
+	Sprite* ready = Sprite::createWithSpriteFrameName("GameMainScene_ready.png");
+	this->getChildByTag(static_cast<int>(Tag::CountDown))->addChild(ready, static_cast<int>(ZOrder::CountDown), static_cast<int>(Tag::Ready));
+	ready->setPosition(WIN_POS(0.5f, 0.5f));
 
 	this->scheduleOnce(schedule_selector(GameMainScene::openCountDown), 2);
 }
 
 void GameMainScene::openCountDown(float dt)
 {
-	Layer* layer = static_cast<Layer*>(this->getChildByTag(static_cast<int>(Tag::CountDown)));
-	Director::getInstance()->getEventDispatcher()->removeEventListenersForTarget(layer);
-	layer->removeFromParentAndCleanup(true);
+	//Layer* layer = static_cast<Layer*>(this->getChildByTag(static_cast<int>(Tag::CountDown)));
+	//Director::getInstance()->getEventDispatcher()->removeEventListenersForTarget(layer);
+	//layer->removeFromParentAndCleanup(true);
+	this->getChildByTag(static_cast<int>(Tag::CountDown))->getChildByTag(static_cast<int>(Tag::Ready))->setVisible(false);
+	this->getChildByTag(static_cast<int>(Tag::CountDown))->setVisible(false);
+
+	Sprite* go = Sprite::createWithSpriteFrameName("GameMainScene_go.png");
+	this->addChild(go, static_cast<int>(ZOrder::CountDown), static_cast<int>(Tag::Go));
+	go->setPosition(WIN_POS(0.5f, 0.5f));
+
+	FadeTo* fadeout = FadeTo::create(0.7f, 0);
+	ScaleTo* scaleUp = ScaleTo::create(0.7, 3.0f);
+	Spawn* spawn = Spawn::create(fadeout, scaleUp, nullptr);
+	EaseCubicActionIn* easeIn = EaseCubicActionIn::create(spawn);
+	go->runAction(easeIn);
+
 	_startTimerFlag = true;
+	setEventListener();
 }
 
 void GameMainScene::update(float dt)
@@ -134,14 +143,19 @@ void GameMainScene::setEventListener()
 	listener->onTouchMoved = CC_CALLBACK_2(GameMainUserController::touchMoved, _userController, this);
 	listener->onTouchEnded = CC_CALLBACK_2(GameMainUserController::touchEnded, _userController, this);
 
-	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+	Layer* controllLayer = Layer::create();
+	this->addChild(controllLayer, static_cast<int>(ZOrder::ControllLayer), static_cast<int>(Tag::ControllLayer));
+	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, controllLayer);
 }
 
 void GameMainScene::checkTime()
 {
 	char time[100];
-	Label* timer = static_cast<Label*>(this->getChildByTag(static_cast<int>(Tag::Timer)));
+
+	ui::Text* timer = dynamic_cast<ui::Text*>(this->getChildByName("GameMainScene_UI")->getChildByName("GameMainScene_timer"));
+
 	sprintf(time, "%d", _userController->getModel()->getTimeLeft());
+
 	timer->setString(time);
 
 
@@ -149,16 +163,13 @@ void GameMainScene::checkTime()
 	{
 		if(_userController->getModel()->getGamePrevStatus() == GameMainModel::GameStatus::Playing)
 		{
-			Layer* layer = Layer::create();
-			this->addChild(layer);
+			Layer* controllLayer = static_cast<Layer*>(this->getChildByTag(static_cast<int>(Tag::ControllLayer)));
 
-			EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
-			listener->setSwallowTouches(true);
-			listener->onTouchBegan = [](Touch *touch, Event *event)
-			{
-				return true;
-			};
-			Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, layer);
+			Director::getInstance()->getEventDispatcher()->removeEventListenersForTarget(controllLayer);
+
+			Sprite* timeup = Sprite::createWithSpriteFrameName("GameMainScene_timeup.png");
+			this->addChild(timeup, static_cast<int>(ZOrder::CountDown), static_cast<int>(Tag::Go));
+			timeup->setPosition(WIN_POS(0.5f, 0.5f));
 		}
 	}
 }
@@ -180,13 +191,13 @@ void GameMainScene::checkBalls()
 //		{
 //			pushDestroyBallsList(ballInfo);
 //		}
-		if (ballInfo->isSelected)
-		{
-			changeTextureOfBall(ballInfo, CustomPhysicsSprite::BallTextureType::Selected);
-		}
-		else if (!ballInfo->isSelectEnable)
+		if (!ballInfo->isSelectEnable)
 		{
 			changeTextureOfBall(ballInfo, CustomPhysicsSprite::BallTextureType::Disabled);
+		}
+		else if (ballInfo->isSelected)
+		{
+			changeTextureOfBall(ballInfo, CustomPhysicsSprite::BallTextureType::Selected);
 		}
 		else
 		{
@@ -205,52 +216,32 @@ void GameMainScene::checkDust()
 	_dustSelectedFlag = !_dustSelectedFlag;
 
 	if (_dustSelectedFlag)
-		static_cast<Sprite*>(this->getChildByTag(static_cast<int>(Tag::Dust)))->setSpriteFrame("dust_selected.png");
+		this->getDust()->loadTexture("GameMainScene_dust_selected.png", TextureResType::PLIST);
 	else
-		static_cast<Sprite*>(this->getChildByTag(static_cast<int>(Tag::Dust)))->setSpriteFrame("dust_normal.png");
-}
-
-void GameMainScene::createPoints()
-{
-	Label* presentPoints = Label::createWithSystemFont("0", "", 100);
-	presentPoints->setPosition(WIN_POS(0.8, 0.9));
-	presentPoints->setColor(Color3B(0, 0, 0));
-	this->addChild(presentPoints, static_cast<int>(ZOrder::PresentPoints), static_cast<int>(Tag::PresentPoints));
-
-	Label* totalPoints = Label::createWithSystemFont("0", "", 100);
-	totalPoints->setPosition(WIN_POS(0.2, 0.9));
-	totalPoints->setColor(Color3B(255, 255, 0));
-	this->addChild(totalPoints, static_cast<int>(ZOrder::TotalPoints), static_cast<int>(Tag::TotalPoints));
+		this->getDust()->loadTexture("GameMainScene_dust_normal.png", TextureResType::PLIST);
 }
 
 void GameMainScene::checkPoints()
 {
 	char points[100];
 
-	Label* presentPoints = static_cast<Label*>(this->getChildByTag(static_cast<int>(Tag::PresentPoints)));
-	sprintf(points, "%d", _userController->getModel()->getPresentPoints());
-	presentPoints->setString(points);
+	ui::Text* addingPoints = dynamic_cast<ui::Text*>(this->getChildByName("GameMainScene_UI")->getChildByName("GameMainScene_addingPoints"));
 
-	Label* totalPoints = static_cast<Label*>(this->getChildByTag(static_cast<int>(Tag::TotalPoints)));
+	sprintf(points, "%d", _userController->getModel()->getAddingPoints());
+	addingPoints->setString(points);
+	
+
+	ui::Text* totalPoints = dynamic_cast<ui::Text*>(this->getChildByName("GameMainScene_UI")->getChildByName("GameMainScene_totalPoints"));
+
 	sprintf(points, "%d", _userController->getModel()->getTotalPoints());
 	totalPoints->setString(points);
 }
 
-void GameMainScene::createTimer()
-{
-	char time[100];
-	sprintf(time, "%d", (int)DEFAULT_TIME_LEFT);
-	Label* timer = Label::createWithSystemFont(time, "", 140);
-	timer->setPosition(WIN_POS(0.5, 0.9));
-	timer->setColor(Color3B(255, 0, 0));
-	this->addChild(timer, static_cast<int>(ZOrder::Timer), static_cast<int>(Tag::Timer));
-}
-
 void GameMainScene::createBG()
 {
-	Sprite* bg = Sprite::createWithSpriteFrameName("BG.png");
-	bg->setPosition(WIN_POS(0.5f, 0.5f));
-	this->addChild(bg, static_cast<int>(ZOrder::BG), static_cast<int>(Tag::BG));
+	this->addChild( cocostudio::GUIReader::getInstance()->widgetFromJsonFile("GameMainScene.ExportJson"), static_cast<int>(ZOrder::BG) );
+
+	ui::ImageView* bg = dynamic_cast<ui::ImageView*>(this->getChildByName("GameMainScene_UI")->getChildByName("GameMainScene_BG"));
 
 	b2BodyDef bgDef;
 	bgDef.type = b2_staticBody;
@@ -259,15 +250,12 @@ void GameMainScene::createBG()
 	b2Body* bgBody = _world->CreateBody(&bgDef);
 
 	gbox2d::GB2ShapeCache* sc = gbox2d::GB2ShapeCache::getInstance();
-	sc->addFixturesToBody(bgBody, "BG");
-	bg->setAnchorPoint(sc->anchorPointForShape("BG"));
-}
+	sc->addFixturesToBody(bgBody, "GameMainScene_BG");
+	bg->setAnchorPoint(sc->anchorPointForShape("GameMainScene_BG"));
 
-void GameMainScene::createDust()
-{
-	Sprite* dust = Sprite::createWithSpriteFrameName("dust_normal.png");
-	dust->setPosition(WIN_POS(0.5, 0.5));
-	this->addChild(dust, static_cast<int>(ZOrder::Dust), static_cast<int>(Tag::Dust));
+
+	LayerColor* layer = LayerColor::create(Color4B(0, 0, 0, 128));
+	this->addChild(layer, static_cast<int>(ZOrder::CountDown), static_cast<int>(Tag::CountDown));
 }
 
 void GameMainScene::createBallsInInit()
@@ -421,48 +409,61 @@ void GameMainScene::destroyBall(CustomPhysicsSprite* ball)
 	ball->destroy(_world);
 }
 
-void GameMainScene::createReturnButton()
+void GameMainScene::createPauseButton()
 {
-	Sprite* btn = Sprite::createWithSpriteFrameName("HelloWorld.png");
-	btn->setScale(0.5f);
-	btn->setPosition(WIN_POS(0.1f, 0.1f));
-	this->addChild(btn, 20);
+	ui::Button* pauseButton = dynamic_cast<ui::Button*>(this->getChildByName("GameMainScene_UI")->getChildByName("GameMainScene_pauseButton"));
 
-	EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
-	listener->onTouchBegan = [this](Touch* touch, Event* event)
-	{
-		Node* target = event->getCurrentTarget();
-		Vec2 touchLocation = target->convertToNodeSpace(touch->getLocation());
-		Rect targetRect = Rect(0, 0, target->getContentSize().width, target->getContentSize().height);
-
-		if (targetRect.containsPoint(touchLocation)) {
-			gotoNextScene(GameTitleScene::createScene());
-
-//			if (_pauseFlag)
-//			{
-//				CustomPhysicsSprite::GM = GM_APPLY_FORCE;
-//				_pauseFlag = false;
-//			}
-//			else
-//			{
-//				CustomPhysicsSprite::GM = 0.0f;
-//				_pauseFlag = true;
-//			}
-		}
-
-		return false;
-	};
-	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, btn);
+	pauseButton->setPressedActionEnabled(false);
+	pauseButton->addTouchEventListener(CC_CALLBACK_2(GameMainScene::touchEvent_pauseButton, this));
 }
+
+void GameMainScene::touchEvent_pauseButton(Ref* pSender, ui::Widget::TouchEventType type)
+{
+    switch (type)
+    {
+        case ui::Widget::TouchEventType::BEGAN:
+            CCLOG("Touch Down");
+            break;
+
+        case ui::Widget::TouchEventType::MOVED:
+            CCLOG("Touch Move");
+            break;
+
+        case ui::Widget::TouchEventType::ENDED:
+            CCLOG("Touch Up");
+			dynamic_cast<ui::Button*>(pSender)->setTouchEnabled(false);
+			dynamic_cast<ui::Button*>(pSender)->setHighlighted(true);
+			gotoNextScene(GameTitleScene::createScene());
+			//			if (_pauseFlag)
+			//			{
+			//				CustomPhysicsSprite::GM = GM_APPLY_FORCE;
+			//				_pauseFlag = false;
+			//			}
+			//			else
+			//			{
+			//				CustomPhysicsSprite::GM = 0.0f;
+			//				_pauseFlag = true;
+			//			}
+            break;
+
+        case ui::Widget::TouchEventType::CANCELED:
+			CCLOG("Touch Cancelled");
+            break;
+
+        default:
+            break;
+    }
+}
+
 
 Vector<CustomPhysicsSprite*> GameMainScene::getBallsList() const
 {
 	return _ballsList;
 }
 
-Sprite* GameMainScene::getDust() const
+ui::ImageView* GameMainScene::getDust() const
 {
-	return static_cast<Sprite*>(this->getChildByTag(static_cast<int>(Tag::Dust)));
+	return dynamic_cast<ui::ImageView*>(this->getChildByName("GameMainScene_UI")->getChildByName("GameMainScene_dust"));
 }
 
 

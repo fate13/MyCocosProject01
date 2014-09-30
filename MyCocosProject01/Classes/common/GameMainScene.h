@@ -14,6 +14,7 @@
 #include "BOX2D/BOX2D.h"
 #include "GameMainUserController.h"
 #include "CustomPhysicsSprite.h"
+#include "ui/CocosGUI.h"
 
 
 USING_NS_CC;
@@ -35,7 +36,7 @@ public:
 
 	Vector<CustomPhysicsSprite*> getBallsList() const;
 
-	Sprite* getDust() const;
+	ui::ImageView* getDust() const;
 
 
 
@@ -55,6 +56,7 @@ private:
 		Dust,
 		Ball,
 		BallBlur,
+		ControllLayer,
 		CountDown,
 		PresentPoints,
 		TotalPoints,
@@ -67,9 +69,13 @@ private:
 		Dust,
 		Ball,
 		CountDown,
+		ControllLayer,
 		PresentPoints,
 		TotalPoints,
-		Timer
+		Timer,
+		Ready,
+		Go,
+		Timeup
 	};
 
 	b2World* _world;
@@ -79,7 +85,7 @@ private:
 	Vector<CustomPhysicsSprite*> _destroyBallsList;
 	
 	//SpriteBatchNode* _gameMainBatchNode;
-	Layer* ll;
+	//Layer* ll;
 
 	std::shared_ptr<GameMainUserController> _userController;
 
@@ -89,10 +95,8 @@ private:
 	void createBallsInInit();
 	void createBG();
 	void createBall(const std::shared_ptr<GameMainModel::BallInfo> ballInfo);
-	void createDust();
-	void createPoints();
-	void createTimer();
-	void createReturnButton();
+
+	void createPauseButton();
 	void startGame();
 	void createCountDown();
 	void openCountDown(float dt);
@@ -107,6 +111,8 @@ private:
 	void changeTextureOfBall(const std::shared_ptr<GameMainModel::BallInfo> ballInfo, const CustomPhysicsSprite::BallTextureType ballTextureType);
 	bool _pauseFlag;
 	bool _startTimerFlag;
+
+	void touchEvent_pauseButton(Ref* pSender, ui::Widget::TouchEventType type);
 
 };
 

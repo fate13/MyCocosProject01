@@ -9,6 +9,7 @@
 #include "AppMacros.h"
 #include "GameTitleScene.h"
 #include "GameMainScene.h"
+#include "cocostudio/CocoStudio.h"
 
 
 GameTitleScene::~GameTitleScene()
@@ -38,36 +39,32 @@ void GameTitleScene::sceneSetting(const std::string imageName)
 {
 	if (imageName == textureAtlasName)
 	{
-		createBG();
-		createStartButton();
+		createUI();
 	}
 
 	pleaseWaitLayer_out(nullptr);
 
 }
 
-void GameTitleScene::createBG()
+void GameTitleScene::createUI()
 {
-	Sprite* bg = Sprite::createWithSpriteFrameName("testBG.png");
-	bg->setPosition(WIN_POS(0.5f, 0.5f));
+	this->addChild( cocostudio::GUIReader::getInstance()->widgetFromJsonFile("GameTitleScene.ExportJson") );
 
-	this->addChild(bg);
-}
+	ui::Button* playButton = dynamic_cast<ui::Button*>( this->getChildByName("GameTitleScene_UI")->getChildByName("GameTitleScene_frontContainer")->getChildByName("GameTitleScene_playButton") );
+	playButton->setPressedActionEnabled(true);
+	playButton->addTouchEventListener(CC_CALLBACK_2(GameTitleScene::touchEvent_playButton, this));
 
-void GameTitleScene::createStartButton()
-{
-	ui::Button* button = ui::Button::create("startButton_normal.png", "startButton_pressed.png", "startButton_disabled.png", ui::TextureResType::PLIST);
-	button->setPressedActionEnabled(true);
-	button->setPosition(WIN_POS(0.5f, 0.5f));
-	button->addTouchEventListener(CC_CALLBACK_2(GameTitleScene::touchEvent_startButton, this));
+	ui::Button* howtoButton = dynamic_cast<ui::Button*>( this->getChildByName("GameTitleScene_UI")->getChildByName("GameTitleScene_frontContainer")->getChildByName("GameTitleScene_howtoButton") );
+	howtoButton->setTouchEnabled(false);
+	howtoButton->setBright(false);
 
-	ui::Layout* layout = ui::Layout::create();
-	this->addChild(layout);
-	layout->addChild(button);
+	ui::Button* scoreButton = dynamic_cast<ui::Button*>( this->getChildByName("GameTitleScene_UI")->getChildByName("GameTitleScene_frontContainer")->getChildByName("GameTitleScene_scoreButton") );
+	scoreButton->setTouchEnabled(false);
+	scoreButton->setBright(false);
 
 }
 
-void GameTitleScene::touchEvent_startButton(Ref *pSender, ui::Widget::TouchEventType type)
+void GameTitleScene::touchEvent_playButton(Ref* pSender, ui::Widget::TouchEventType type)
 {
     switch (type)
     {
@@ -81,6 +78,9 @@ void GameTitleScene::touchEvent_startButton(Ref *pSender, ui::Widget::TouchEvent
 
         case ui::Widget::TouchEventType::ENDED:
             CCLOG("Touch Up");
+			dynamic_cast<ui::Button*>(pSender)->setPressedActionEnabled(false);
+			dynamic_cast<ui::Button*>(pSender)->setTouchEnabled(false);
+			dynamic_cast<ui::Button*>(pSender)->setHighlighted(true);
 			gotoNextScene(GameMainScene::createScene());
             break;
 

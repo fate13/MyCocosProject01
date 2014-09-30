@@ -74,7 +74,10 @@ void ActionManagerEx::initWithDictionary(const char* jsonName,const rapidjson::V
 		action->initWithDictionary(actionDic,root);
 		actionList.pushBack(action);
 	}
-	_actionDic.insert(std::pair<std::string, cocos2d::Vector<ActionObject*>>(fileName, actionList));
+	// Sasaki Custom
+	//_actionDic.insert(std::pair<std::string, cocos2d::Vector<ActionObject*>>(fileName, actionList));
+
+	_actionDic[fileName] = actionList;
 }
     
     void ActionManagerEx::initWithBinary(const char* file,

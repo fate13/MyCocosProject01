@@ -46,6 +46,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 		FileUtils::getInstance()->addSearchPath(smallResource.directory);
 	}
 
+	FileUtils::getInstance()->addSearchPath("JsonAnimation");
+
+	FileUtils::getInstance()->addSearchPath("fonts");
+
 
 	// turn on display FPS
     director->setDisplayStats(true);
