@@ -51,31 +51,18 @@ private:
 
 	enum class ZOrder
 	{
-		Batch,
-		BG,
-		Dust,
+		UI,
 		Ball,
-		BallBlur,
-		ControllLayer,
-		CountDown,
-		PresentPoints,
-		TotalPoints,
-		Timer
 	};
 
 	enum class Tag
 	{
-		BG,
-		Dust,
 		Ball,
-		CountDown,
-		ControllLayer,
-		PresentPoints,
-		TotalPoints,
-		Timer,
-		Ready,
-		Go,
-		Timeup
+		DustBlur,
+		TimerBG,
+		Pentagon1,
+		Pentagon2,
+		ChainUIBlink
 	};
 
 	b2World* _world;
@@ -93,26 +80,53 @@ private:
 
 	void initPhysics();
 	void createBallsInInit();
-	void createBG();
+	void createUI();
 	void createBall(const std::shared_ptr<GameMainModel::BallInfo> ballInfo);
 
 	void createPauseButton();
+	void createContinueButton();
+	void createScoreButton();
+	void createRetryButton();
+
 	void startGame();
 	void createCountDown();
-	void openCountDown(float dt);
+	void openCountDown();
 	void setEventListener();
 	void checkTime();
 	void checkBalls();
+	void drawLineOnSelectedBalls();
 	void checkDust();
+	void animationDustBlur();
 	void checkPoints();
+	void updateTotalPoints(float dt);
+	void checkChainPoints();
+	void setBonusModeIn();
+	void setBonusModeOut();
+	void DelaySetTotalPoints(int preTotalPoints);
 	void pushDestroyBallsList(const std::shared_ptr<GameMainModel::BallInfo> ballInfo);
 	void setDestroyBallsAnimation();
 	void destroyBall(CustomPhysicsSprite* ball);
 	void changeTextureOfBall(const std::shared_ptr<GameMainModel::BallInfo> ballInfo, const CustomPhysicsSprite::BallTextureType ballTextureType);
+	void gamePause();
+	void gameContinue();
+
+	void setChainUI();
+
 	bool _pauseFlag;
-	bool _startTimerFlag;
+	bool _timeupFlag;
+	bool _last10Flag;
+	bool _bonusModeFlag;
+
+	int _preAddingPoints;
+	int _preTotalPoints;
+	int _realyTotalPoints;
+
+	int _preTimeLeft;
 
 	void touchEvent_pauseButton(Ref* pSender, ui::Widget::TouchEventType type);
+	void touchEvent_continueButton(Ref* pSender, ui::Widget::TouchEventType type);
+	void touchEvent_scoreButton(Ref* pSender, ui::Widget::TouchEventType type);
+	void touchEvent_retryButton(Ref* pSender, ui::Widget::TouchEventType type);
 
 };
 

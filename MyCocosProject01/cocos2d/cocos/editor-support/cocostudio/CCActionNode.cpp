@@ -54,14 +54,26 @@ ActionNode::ActionNode()
 
 ActionNode::~ActionNode()
 {
-    if (_action == nullptr)
+//    if (_action == nullptr)
+//    {
+//        CC_SAFE_RELEASE_NULL(_actionSpawn);
+//    }
+//    else
+//    {
+//        CC_SAFE_RELEASE_NULL(_action);
+//    }
+
+	// Sasaki Custom
+	if (_action != nullptr)
     {
-        CC_SAFE_RELEASE_NULL(_actionSpawn);
+		CC_SAFE_RELEASE_NULL(_action);
+
     }
-    else
-    {
-        CC_SAFE_RELEASE_NULL(_action);
-    }
+    if (_actionSpawn != nullptr) {
+		CC_SAFE_RELEASE_NULL(_actionSpawn);
+	}
+
+
 
     for (auto object : _frameArray)
     {

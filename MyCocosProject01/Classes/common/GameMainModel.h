@@ -20,6 +20,8 @@ public:
 	{
 		Ready,
 		Playing,
+		BonusModeIn,
+		BonusModeOut,
 		TimeUp
 	};
 
@@ -52,15 +54,15 @@ public:
 	
 
 	int getBallsNumber() const;
-	std::vector<std::shared_ptr<BallInfo>> getBallsInfoList();
+	std::vector<std::shared_ptr<BallInfo>> getBallsInfoList() const;
 	std::vector<std::shared_ptr<BallInfo>> getSelectedBallsInfoList() const;
-	std::vector<std::shared_ptr<BallInfo>> getVanishAnimationBallsInfoList() const;
+	std::vector<std::shared_ptr<BallInfo>> getVanishAnimationBallsInfoList();
 	int getPresentPoints() const;
 	int getAddingPoints() const;
 	int getTotalPoints() const;
 	bool isDustSelected() const;
-	int getTimeLeft() const;
-	void setCompleteVanishAnimation();
+	float getTimeLeft() const;
+	float getChainPoints() const;
 
 	GameMainModel();
 	~GameMainModel();
@@ -75,6 +77,7 @@ private:
 	GameStatus _gamePrevStatus;
 
 	float _timeLeft;
+	float _readyTime;
 	int _ballsNumber;
 
 	std::vector<std::shared_ptr<BallInfo>> _ballsInfoList;
@@ -85,8 +88,11 @@ private:
 
 	bool _dustSelectedFlag;
 
+	bool _bonusModeFlag;
+
 	int _presentPoints;
 	int _totalPoints;
+	float _chainPoints;
 
 	void setUpGame();
 	void createBallsInfoInInit();
@@ -95,6 +101,7 @@ private:
 	void checkLengthSelectedBallToRest();
 	void calculateTotalPoints();
 	void allBallsDisabled();
+	void calculateChainPoints();
 
 	int _randomR;
 };
