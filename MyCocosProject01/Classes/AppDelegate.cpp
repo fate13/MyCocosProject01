@@ -22,19 +22,23 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-
 	// デザインサイズの指定
-	director->getOpenGLView()->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::SHOW_ALL);
+	if (glview->getFrameSize().height / glview->getFrameSize().width > 1.55) {
+		director->getOpenGLView()->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::FIXED_WIDTH);
+	}
+	else {
+		director->getOpenGLView()->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::SHOW_ALL);
+	}
 
 	// リソースのマルチリゾリューション対応
 	// iPad用リソース
-	if (glview->getFrameSize().height > largeResourceThreshold)
+	if (glview->getFrameSize().width > largeResourceThreshold)
 	{
 		director->setContentScaleFactor(largeResource.size.height / designResolutionSize.height);
 		FileUtils::getInstance()->addSearchPath(largeResource.directory);
 	}
 	// iPhoneHD用リソース
-	else if (glview->getFrameSize().height > smallResource.size.height)
+	else if (glview->getFrameSize().width > smallResource.size.height)
 	{
 		director->setContentScaleFactor(mediumResource.size.height / designResolutionSize.height);
 		FileUtils::getInstance()->addSearchPath(mediumResource.directory);

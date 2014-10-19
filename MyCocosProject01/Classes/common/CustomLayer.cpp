@@ -32,6 +32,11 @@ bool CustomLayer::init()
 		return false;
 	}
 
+	float glFrameOffsetY = (Director::getInstance()->getOpenGLView()->getFrameSize().height - Director::getInstance()->getOpenGLView()->getFrameSize().width * 1.5) / 2;
+
+	if (glFrameOffsetY > 0)
+		this->setPositionY(glFrameOffsetY);
+
 	return true;
 }
 
@@ -56,6 +61,17 @@ void CustomLayer::pleaseWaitLayer_set()
 		return true;
 	};
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, overLayer);
+
+	Node* circle0 = overLayer->getChildByName("Common_UI")->getChildByName("Common_coreContainer")->getChildByName("Common_core")->getChildByName("Common_center0");
+	RotateBy* rotate0 = RotateBy::create(8.0f, -360);
+	rotate0->setTag(123);
+	circle0->runAction(rotate0);
+
+	Node* circle1 = overLayer->getChildByName("Common_UI")->getChildByName("Common_coreContainer")->getChildByName("Common_core")->getChildByName("Common_center1");
+	RotateBy* rotate1 = RotateBy::create(8.0f, 360);
+	rotate1->setTag(234);
+	circle1->runAction(rotate1);
+
 }
 
 void CustomLayer::pleaseWaitAnimation_loop(Layer* overLayer)
@@ -81,6 +97,18 @@ void CustomLayer::pleaseWaitLayer_out(const std::function<void()> callBackFunc)
 	CallFunc* callFunc = CallFunc::create(func);
 
 	cocostudio::ActionManagerEx::getInstance()->playActionByName("Common.ExportJson", "pleaseWait_out", callFunc);
+
+
+	Node* circle0 = overLayer->getChildByName("Common_UI")->getChildByName("Common_coreContainer")->getChildByName("Common_core")->getChildByName("Common_center0");
+	circle0->stopActionByTag(123);
+	RotateBy* rotate0 = RotateBy::create(0.1f, -180-circle0->getRotation());
+	circle0->runAction(rotate0);
+
+	Node* circle1 = overLayer->getChildByName("Common_UI")->getChildByName("Common_coreContainer")->getChildByName("Common_core")->getChildByName("Common_center1");
+	circle1->stopActionByTag(234);
+	RotateBy* rotate1 = RotateBy::create(0.1f, 180-circle1->getRotation());
+	circle1->runAction(rotate1);
+
 }
 
 void CustomLayer::pleaseWaitAnimation_out(const Layer* overLayer, const std::function<void()> callBackFunc)
@@ -106,10 +134,20 @@ void CustomLayer::pleaseWaitLayer_in(const std::function<void()> callBackFunc)
 	CallFunc* callFunc = CallFunc::create(callBackFunc);
 
 	cocostudio::ActionManagerEx::getInstance()->playActionByName("Common.ExportJson", "pleaseWait_in", callFunc);
+
+	Node* circle0 = overLayer->getChildByName("Common_UI")->getChildByName("Common_coreContainer")->getChildByName("Common_core")->getChildByName("Common_center0");
+	circle0->setRotation(0.0f);
+
+	Node* circle1 = overLayer->getChildByName("Common_UI")->getChildByName("Common_coreContainer")->getChildByName("Common_core")->getChildByName("Common_center1");
+	circle1->setRotation(0.0f);
+
+
 }
 
 void CustomLayer::pleaseWaitAnimation_in(const Layer* overLayer, const std::function<void()> callBackFunc)
 {
+	cocostudio::ActionManagerEx::getInstance()->getActionByName("Common.ExportJson", "pleaseWait_out")->stop();
+
 	Sprite* img = (Sprite*)overLayer->getChildByName("img");
 	img->stopAllActions();
 	img->runAction(PleaseWaitAnimation::inAnimation(callBackFunc));
@@ -150,6 +188,9 @@ void CustomLayer::gotoNextScene(Scene* nextScene)
 
 void CustomLayer::replaceScene()
 {
+	cocostudio::ActionManagerEx::getInstance()->getActionByName("Common.ExportJson", "pleaseWait_in")->stop();
+	cocostudio::ActionManagerEx::getInstance()->releaseActions();
+
 	// gotoNextScene関数内でretainしたので、releaseする。ただし最初のSceneはretainしていないので例外。
 	if(Director::getInstance()->getRunningScene()->getReferenceCount() > 2)
 	{

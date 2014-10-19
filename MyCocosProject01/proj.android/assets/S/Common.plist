@@ -7,67 +7,67 @@
             <key>Common_center0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{438,2},{68,62}}</string>
+                <string>{{434,80},{67,61}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{68,62}}</string>
+                <string>{{0,0},{67,61}}</string>
                 <key>sourceSize</key>
-                <string>{68,62}</string>
+                <string>{67,61}</string>
             </dict>
             <key>Common_center1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{282,158},{77,77}}</string>
+                <string>{{434,2},{76,76}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{77,77}}</string>
+                <string>{{0,0},{76,76}}</string>
                 <key>sourceSize</key>
-                <string>{77,77}</string>
+                <string>{76,76}</string>
             </dict>
             <key>Common_core.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{282,2},{154,154}}</string>
+                <string>{{281,2},{151,151}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{154,154}}</string>
+                <string>{{0,0},{151,151}}</string>
                 <key>sourceSize</key>
-                <string>{154,154}</string>
+                <string>{151,151}</string>
             </dict>
             <key>Common_fin.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{278,270}}</string>
+                <string>{{2,2},{277,269}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{278,270}}</string>
+                <string>{{0,0},{277,269}}</string>
                 <key>sourceSize</key>
-                <string>{278,270}</string>
+                <string>{277,269}</string>
             </dict>
             <key>Common_finMark.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{438,66},{21,40}}</string>
+                <string>{{434,143},{19,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{21,40}}</string>
+                <string>{{0,0},{19,40}}</string>
                 <key>sourceSize</key>
-                <string>{21,40}</string>
+                <string>{19,40}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -79,7 +79,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2f2510a06f7fdc3fd0980612f5dd1507:f3e99fd41fc37a29df7429d64fd89c5e:850199491236813674e0e6bea887abb5$</string>
+            <string>$TexturePacker:SmartUpdate:90eedffabef1b27eeba7c12f01bcb913:56b43261b7f16e9000fb831f09474f09:850199491236813674e0e6bea887abb5$</string>
             <key>textureFileName</key>
             <string>Common.png</string>
         </dict>

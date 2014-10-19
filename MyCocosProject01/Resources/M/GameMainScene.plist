@@ -7,20 +7,33 @@
             <key>GameMainScene_BG.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{640,1138}}</string>
+                <string>{{2,716},{640,672}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{640,1138}}</string>
+                <string>{{0,0},{640,672}}</string>
                 <key>sourceSize</key>
-                <string>{640,1138}</string>
+                <string>{640,672}</string>
+            </dict>
+            <key>GameMainScene_all_blackFilter.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{644,2032},{11,11}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{11,11}}</string>
+                <key>sourceSize</key>
+                <string>{11,11}</string>
             </dict>
             <key>GameMainScene_ball1_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{123,1546},{100,100}}</string>
+                <string>{{1007,1536},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +46,7 @@
             <key>GameMainScene_ball1_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{225,1546},{100,100}}</string>
+                <string>{{1109,1512},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +59,7 @@
             <key>GameMainScene_ball1_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{413,1284},{100,100}}</string>
+                <string>{{1211,1510},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +72,7 @@
             <key>GameMainScene_ball2_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{463,1386},{100,100}}</string>
+                <string>{{1313,1510},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +85,7 @@
             <key>GameMainScene_ball2_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{515,1284},{100,100}}</string>
+                <string>{{1252,1923},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +98,7 @@
             <key>GameMainScene_ball2_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{549,1142},{100,100}}</string>
+                <string>{{1354,1923},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +111,7 @@
             <key>GameMainScene_ball3_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{463,1488},{100,100}}</string>
+                <string>{{1372,1612},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +124,7 @@
             <key>GameMainScene_ball3_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{473,1590},{100,100}}</string>
+                <string>{{1388,1714},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +137,7 @@
             <key>GameMainScene_ball3_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{565,1386},{100,100}}</string>
+                <string>{{1388,1816},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +150,7 @@
             <key>GameMainScene_ball4_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{565,1488},{100,100}}</string>
+                <string>{{1456,1918},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +163,7 @@
             <key>GameMainScene_ball4_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{617,1244},{100,100}}</string>
+                <string>{{981,641},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +176,7 @@
             <key>GameMainScene_ball4_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{473,1692},{100,100}}</string>
+                <string>{{1020,482},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +189,7 @@
             <key>GameMainScene_ball5_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{473,1794},{100,100}}</string>
+                <string>{{981,743},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +202,7 @@
             <key>GameMainScene_ball5_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{473,1896},{100,100}}</string>
+                <string>{{981,845},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +215,7 @@
             <key>GameMainScene_ball5_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{575,1590},{100,100}}</string>
+                <string>{{1083,584},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +228,7 @@
             <key>GameMainScene_ball6_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{667,1346},{100,100}}</string>
+                <string>{{1122,482},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +241,7 @@
             <key>GameMainScene_ball6_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{667,1448},{100,100}}</string>
+                <string>{{1083,686},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -241,7 +254,7 @@
             <key>GameMainScene_ball6_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{575,1692},{100,100}}</string>
+                <string>{{1083,788},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,7 +267,7 @@
             <key>GameMainScene_ball7_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{575,1794},{100,100}}</string>
+                <string>{{1083,890},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -267,7 +280,7 @@
             <key>GameMainScene_ball7_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{575,1896},{100,100}}</string>
+                <string>{{1114,992},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -280,7 +293,7 @@
             <key>GameMainScene_ball7_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{677,1550},{100,100}}</string>
+                <string>{{1114,1094},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -293,7 +306,7 @@
             <key>GameMainScene_ball8_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{677,1652},{100,100}}</string>
+                <string>{{1185,584},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -306,7 +319,7 @@
             <key>GameMainScene_ball8_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{677,1754},{100,100}}</string>
+                <string>{{1224,482},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -319,7 +332,7 @@
             <key>GameMainScene_ball8_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{677,1856},{100,100}}</string>
+                <string>{{1185,686},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -332,7 +345,7 @@
             <key>GameMainScene_ball9_disabled.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{644,2},{100,100}}</string>
+                <string>{{1185,788},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -345,7 +358,7 @@
             <key>GameMainScene_ball9_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{644,104},{100,100}}</string>
+                <string>{{1185,890},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -358,7 +371,7 @@
             <key>GameMainScene_ball9_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{644,206},{100,100}}</string>
+                <string>{{1216,992},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -368,10 +381,153 @@
                 <key>sourceSize</key>
                 <string>{100,100}</string>
             </dict>
+            <key>GameMainScene_blackFilter.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{18,712}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{18,712}}</string>
+                <key>sourceSize</key>
+                <string>{18,712}</string>
+            </dict>
+            <key>GameMainScene_blueRect.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{295,614},{47,47}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{47,47}}</string>
+                <key>sourceSize</key>
+                <string>{47,47}</string>
+            </dict>
+            <key>GameMainScene_bonusParts_st_Base.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2032},{640,11}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{640,11}}</string>
+                <key>sourceSize</key>
+                <string>{640,11}</string>
+            </dict>
+            <key>GameMainScene_bonusParts_st_activating.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{395,572},{442,74}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{442,74}}</string>
+                <key>sourceSize</key>
+                <string>{442,74}</string>
+            </dict>
+            <key>GameMainScene_bonusParts_st_doubleMode.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{841,2},{515,73}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{515,73}}</string>
+                <key>sourceSize</key>
+                <string>{515,73}</string>
+            </dict>
+            <key>GameMainScene_chainPtMeter.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{606,648},{245,29}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{245,29}}</string>
+                <key>sourceSize</key>
+                <string>{245,29}</string>
+            </dict>
+            <key>GameMainScene_chainPtMeter_in.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{22,673},{290,34}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{290,34}}</string>
+                <key>sourceSize</key>
+                <string>{290,34}</string>
+            </dict>
+            <key>GameMainScene_chainPtMeter_out.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{314,663},{290,34}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{290,34}}</string>
+                <key>sourceSize</key>
+                <string>{290,34}</string>
+            </dict>
+            <key>GameMainScene_chainUI_display.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{707,1344},{313,117}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{313,117}}</string>
+                <key>sourceSize</key>
+                <string>{313,117}</string>
+            </dict>
+            <key>GameMainScene_chainUI_light.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{828,679},{357,151}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{357,151}}</string>
+                <key>sourceSize</key>
+                <string>{357,151}</string>
+            </dict>
+            <key>GameMainScene_dust_blur.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{826,1344},{190,190}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{190,190}}</string>
+                <key>sourceSize</key>
+                <string>{190,190}</string>
+            </dict>
             <key>GameMainScene_dust_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{244,1142},{167,167}}</string>
+                <string>{{876,1657},{167,167}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -384,7 +540,7 @@
             <key>GameMainScene_dust_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{244,1311},{167,167}}</string>
+                <string>{{923,1826},{167,167}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -394,27 +550,274 @@
                 <key>sourceSize</key>
                 <string>{167,167}</string>
             </dict>
-            <key>GameMainScene_go.png</key>
+            <key>GameMainScene_footer.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{123,1142},{402,119}}</string>
+                <string>{{355,1390},{640,350}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{402,119}}</string>
+                <string>{{0,0},{640,350}}</string>
                 <key>sourceSize</key>
-                <string>{402,119}</string>
+                <string>{640,350}</string>
             </dict>
-            <key>GameMainScene_pause_normal.png</key>
+            <key>GameMainScene_frame.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{327,1480},{134,140}}</string>
+                <string>{{46,2},{640,126}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{640,126}}</string>
+                <key>sourceSize</key>
+                <string>{640,126}</string>
+            </dict>
+            <key>GameMainScene_go.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{644,679},{411,182}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{411,182}}</string>
+                <key>sourceSize</key>
+                <string>{411,182}</string>
+            </dict>
+            <key>GameMainScene_header.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,1390},{640,351}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{640,351}}</string>
+                <key>sourceSize</key>
+                <string>{640,351}</string>
+            </dict>
+            <key>GameMainScene_header_bonusParts_message_left.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{839,520},{179,119}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{179,119}}</string>
+                <key>sourceSize</key>
+                <string>{179,119}</string>
+            </dict>
+            <key>GameMainScene_header_bonusParts_message_right.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{826,1536},{179,119}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{179,119}}</string>
+                <key>sourceSize</key>
+                <string>{179,119}</string>
+            </dict>
+            <key>GameMainScene_header_pointsBG_green.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{505,2},{516,166}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{516,166}}</string>
+                <key>sourceSize</key>
+                <string>{516,166}</string>
+            </dict>
+            <key>GameMainScene_header_pointsBG_yellow.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{673,2},{516,166}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{516,166}}</string>
+                <key>sourceSize</key>
+                <string>{516,166}</string>
+            </dict>
+            <key>GameMainScene_onPause_continueButton_normal.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{707,1659},{214,167}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{214,167}}</string>
+                <key>sourceSize</key>
+                <string>{214,167}</string>
+            </dict>
+            <key>GameMainScene_onPause_continueButton_selected.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{707,1875},{214,167}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{214,167}}</string>
+                <key>sourceSize</key>
+                <string>{214,167}</string>
+            </dict>
+            <key>GameMainScene_onPause_parts1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{174,614},{56,119}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{56,119}}</string>
+                <key>sourceSize</key>
+                <string>{56,119}</string>
+            </dict>
+            <key>GameMainScene_onPause_parts2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{313,572},{80,31}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{80,31}}</string>
+                <key>sourceSize</key>
+                <string>{80,31}</string>
+            </dict>
+            <key>GameMainScene_onPause_parts3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{46,644},{56,21}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{56,21}}</string>
+                <key>sourceSize</key>
+                <string>{56,21}</string>
+            </dict>
+            <key>GameMainScene_onPause_retryButton_normal.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1045,1638},{158,167}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{158,167}}</string>
+                <key>sourceSize</key>
+                <string>{158,167}</string>
+            </dict>
+            <key>GameMainScene_onPause_retryButton_selected.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1092,1807},{158,167}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{158,167}}</string>
+                <key>sourceSize</key>
+                <string>{158,167}</string>
+            </dict>
+            <key>GameMainScene_onPause_scoreButton_normal.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{954,1038},{158,167}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{158,167}}</string>
+                <key>sourceSize</key>
+                <string>{158,167}</string>
+            </dict>
+            <key>GameMainScene_onPause_scoreButton_selected.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1018,1343},{158,167}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{158,167}}</string>
+                <key>sourceSize</key>
+                <string>{158,167}</string>
+            </dict>
+            <key>GameMainScene_onReady_blackFilter.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{22,2},{22,669}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{22,669}}</string>
+                <key>sourceSize</key>
+                <string>{22,669}</string>
+            </dict>
+            <key>GameMainScene_pauseBlinder.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{657,2032},{11,11}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{11,11}}</string>
+                <key>sourceSize</key>
+                <string>{11,11}</string>
+            </dict>
+            <key>GameMainScene_pause_disabled.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{954,1207},{134,140}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{134,140}}</string>
+                <key>sourceSize</key>
+                <string>{134,140}</string>
+            </dict>
+            <key>GameMainScene_pause_normal.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1096,1207},{134,140}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{134,140}}</string>
                 <key>sourceSize</key>
@@ -423,7 +826,7 @@
             <key>GameMainScene_pause_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{413,1142},{134,140}}</string>
+                <string>{{1252,1781},{134,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -433,31 +836,83 @@
                 <key>sourceSize</key>
                 <string>{134,140}</string>
             </dict>
-            <key>GameMainScene_ready.png</key>
+            <key>GameMainScene_pentagonLine.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1142},{531,119}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{531,119}}</string>
-                <key>sourceSize</key>
-                <string>{531,119}</string>
-            </dict>
-            <key>GameMainScene_timeup.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,1675},{469,286}}</string>
+                <string>{{644,1092},{308,250}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{469,286}}</string>
+                <string>{{0,0},{308,250}}</string>
                 <key>sourceSize</key>
-                <string>{469,286}</string>
+                <string>{308,250}</string>
+            </dict>
+            <key>GameMainScene_radialRay.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{174,2},{610,137}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{610,137}}</string>
+                <key>sourceSize</key>
+                <string>{610,137}</string>
+            </dict>
+            <key>GameMainScene_ready.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{313,2},{568,190}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{568,190}}</string>
+                <key>sourceSize</key>
+                <string>{568,190}</string>
+            </dict>
+            <key>GameMainScene_timerBG_blue.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1178,1343},{165,165}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{165,165}}</string>
+                <key>sourceSize</key>
+                <string>{165,165}</string>
+            </dict>
+            <key>GameMainScene_timerBG_red.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1205,1614},{165,165}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{165,165}}</string>
+                <key>sourceSize</key>
+                <string>{165,165}</string>
+            </dict>
+            <key>GameMainScene_timeup.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{916,2},{478,348}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{478,348}}</string>
+                <key>sourceSize</key>
+                <string>{478,348}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -469,7 +924,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:263ba3ab1850181e53b19c94628aa674:9250867c4dd9dff28150e9fc2806a02d:0b94b986b793158c7d756500364012fa$</string>
+            <string>$TexturePacker:SmartUpdate:b9ce93a20088c081157c21698f19b4aa:02c1798bc98ad3b64f6fb86e7ffbc189:0b94b986b793158c7d756500364012fa$</string>
             <key>textureFileName</key>
             <string>GameMainScene.png</string>
         </dict>

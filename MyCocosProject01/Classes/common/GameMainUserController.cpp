@@ -92,7 +92,7 @@ void GameMainUserController::touchEnded(cocos2d::Touch *touch, cocos2d::Event *e
 void GameMainUserController::sendDtAndBalls(const float dt, const Vector<CustomPhysicsSprite*> ballsList)
 {
 	std::vector<std::pair<float, float>> ballPosition;
-	int size = ballsList.size();
+	int size = static_cast<int>(ballsList.size());
 
 	for (int i = 0; i < size; ++i)
 	{
@@ -115,11 +115,6 @@ bool GameMainUserController::circleContainPoint(Node* circle, Vec2 touchPoint)
 		return true;
 	else
 		return false;
-}
-
-void GameMainUserController::setCompleteVanishAnimation()
-{
-	_model->setCompleteVanishAnimation();
 }
 
 

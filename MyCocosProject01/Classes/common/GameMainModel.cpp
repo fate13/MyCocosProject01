@@ -32,12 +32,14 @@ void GameMainModel::setUpGame()
 	_gamePrevStatus = GameStatus::Ready;
 	_gameStatus = GameStatus::Ready;
 	_timeLeft = DEFAULT_TIME_LEFT;
+	_readyTime = DEFAULT_READY_TIME;
 	_ballsNumber = BALLS_NUMBER;
 	_touchFlag = false;
 	_dustSelectedFlag = false;
+	_bonusModeFlag = false;
 	_presentPoints = 0;
 	_totalPoints = 0;
-
+	_chainPoints = 0.0f;
 
 	createBallsInfoInInit();
 }
@@ -119,6 +121,14 @@ void GameMainModel::createBallInfo(const int id)
 
 void GameMainModel::receiveDtAndBallsPosition(const float dt, const std::vector<std::pair<float, float>> ballsPosition)
 {
+	_readyTime -= dt;
+
+	if(_readyTime > 0.0f)
+		return;
+	else
+		_readyTime = 0.0f;
+	
+
 	_timeLeft -= dt;
 
 	if (_timeLeft < 0.0f) {
@@ -127,6 +137,7 @@ void GameMainModel::receiveDtAndBallsPosition(const float dt, const std::vector<
 		if (_gameStatus == GameStatus::TimeUp && _gamePrevStatus == GameStatus::Playing)
 		{
 			allBallsDisabled();
+			outDust();
 		}
 
 		_timeLeft = 0.0f;
@@ -139,7 +150,7 @@ void GameMainModel::receiveDtAndBallsPosition(const float dt, const std::vector<
 		setGameStatus(GameStatus::Playing);
 	}
 
-	int size = ballsPosition.size();
+	int size = static_cast<int>(ballsPosition.size());
 	for (int i = 0; i < size; ++i) {
 		_ballsInfoList.at(i)->x = ballsPosition.at(i).first;
 		_ballsInfoList.at(i)->y = ballsPosition.at(i).second;
@@ -147,6 +158,20 @@ void GameMainModel::receiveDtAndBallsPosition(const float dt, const std::vector<
 
 	if (_touchFlag)
 		checkLengthSelectedBallToRest();
+
+	if (_bonusModeFlag) {
+
+		if (_chainPoints == CHAIN_POINTS_THRESHOLD)
+			setGameStatus(GameStatus::BonusModeIn);
+
+		_chainPoints -= (dt * CHAIN_POINTS_THRESHOLD / BONUS_MODE_LENGTH);
+
+		if (_chainPoints < 0.0f) {
+			_chainPoints = 0.0f;
+			_bonusModeFlag = false;
+			setGameStatus(GameStatus::BonusModeOut);
+		}
+	}
 }
 
 void GameMainModel::touchBall(const int id)
@@ -160,7 +185,7 @@ void GameMainModel::touchBall(const int id)
 	{
 		if (_selectedBallsInfoList.size() > 1)
 		{
-			int size = _selectedBallsInfoList.size();
+			int size = static_cast<int>(_selectedBallsInfoList.size());
 			for (int i = size - 1; i > -1; --i)
 			{
 				if (_selectedBallsInfoList.at(i)->id == _ballsInfoList.at(id)->id)
@@ -188,11 +213,11 @@ void GameMainModel::releaseBall()
 {
 	_touchFlag = false;
 
-	_vanishAnimationBallsInfoList.clear();
+	//_vanishAnimationBallsInfoList.clear();
 
 	int addBallsNumber = 0;
 
-	int size = _ballsInfoList.size();
+	int size = static_cast<int>(_ballsInfoList.size());
 
 	// 複数選択状態のボールを決定、_totalPointsに加算
 	if (_selectedBallsInfoList.size() >= 2)
@@ -214,6 +239,7 @@ void GameMainModel::releaseBall()
 					if (_selectedBallsInfoList.at(_selectedBallsInfoList.size() - 1)->id == _ballsInfoList.at(i)->id)
 					{
 						_ballsInfoList.at(i)->number = _presentPoints;
+						_ballsInfoList.at(i)->isSelected	 = false;
 					}
 					// それ以外
 					else
@@ -222,11 +248,11 @@ void GameMainModel::releaseBall()
 						++addBallsNumber;
 					}
 				}
-				_ballsInfoList.at(i)->isSelected	= false;
 			}
 		}
 		_vanishAnimationBallsInfoList = _selectedBallsInfoList;
 		calculateTotalPoints();
+		calculateChainPoints();
 	}
 	// １個だけ選択状態をキャンセル、ダストのときは消滅
 	else
@@ -265,10 +291,30 @@ void GameMainModel::calculateTotalPoints()
 {
 	if (_gameStatus == GameStatus::TimeUp)
 		return;
-	
 
+	if (_bonusModeFlag)
+		_totalPoints += (this->getAddingPoints() * BONUS_MODE_POINTS_SCALE_FACTOR);
+	else
 	_totalPoints += this->getAddingPoints();
 }
+
+void GameMainModel::calculateChainPoints()
+{
+	if (_gameStatus == GameStatus::TimeUp)
+		return;
+
+	if (_bonusModeFlag)
+		return;
+
+	float pt = static_cast<float>(_selectedBallsInfoList.size());
+	_chainPoints += pow(pt, 2.0f);
+
+	if (_chainPoints >= CHAIN_POINTS_THRESHOLD) {
+		_chainPoints = CHAIN_POINTS_THRESHOLD;
+		_bonusModeFlag = true;
+	}
+}
+
 
 void GameMainModel::checkLengthSelectedBallToRest()
 {
@@ -284,7 +330,7 @@ void GameMainModel::checkLengthSelectedBallToRest()
 		float iX = _ballsInfoList.at(i)->x;
 		float iY = _ballsInfoList.at(i)->y;
 
-		float distance = sqrtf(powf((iX-lX), 2) + powf((iY-lY), 2));
+		float distance = sqrtf(powf((iX-lX), 2.0f) + powf((iY-lY), 2.0f));
 
 		if (distance > BALL_DISTANCE_DISABLED_THRESHOLD && !_ballsInfoList.at(i)->isSelected)
 			_ballsInfoList.at(i)->isSelectEnable = false;
@@ -338,11 +384,6 @@ void GameMainModel::outDust()
 	_dustSelectedFlag = false;
 }
 
-void GameMainModel::setCompleteVanishAnimation()
-{
-	_vanishAnimationBallsInfoList.clear();
-}
-
 void GameMainModel::setGameStatus(GameStatus status)
 {
 	_gamePrevStatus = _gameStatus;
@@ -364,7 +405,7 @@ int GameMainModel::getBallsNumber() const
 	return _ballsNumber;
 }
 
-std::vector<std::shared_ptr<GameMainModel::BallInfo>> GameMainModel::getBallsInfoList()
+std::vector<std::shared_ptr<GameMainModel::BallInfo>> GameMainModel::getBallsInfoList() const
 {
 	return _ballsInfoList;
 }
@@ -374,9 +415,11 @@ std::vector<std::shared_ptr<GameMainModel::BallInfo>> GameMainModel::getSelected
 	return _selectedBallsInfoList;
 }
 
-std::vector<std::shared_ptr<GameMainModel::BallInfo>> GameMainModel::getVanishAnimationBallsInfoList() const
+std::vector<std::shared_ptr<GameMainModel::BallInfo>> GameMainModel::getVanishAnimationBallsInfoList()
 {
-	return _vanishAnimationBallsInfoList;
+	std::vector<std::shared_ptr<GameMainModel::BallInfo>> vec = _vanishAnimationBallsInfoList;
+	_vanishAnimationBallsInfoList.clear();
+	return vec;
 }
 
 bool GameMainModel::isDustSelected() const
@@ -394,7 +437,7 @@ int GameMainModel::getAddingPoints() const
 	int points;
 
 	if (_presentPoints == 10)
-		points = (_presentPoints * _selectedBallsInfoList.size());
+		points = (_presentPoints * static_cast<int>(_selectedBallsInfoList.size()));
 	else
 		points = _presentPoints;
 
@@ -406,9 +449,14 @@ int GameMainModel::getTotalPoints() const
 	return _totalPoints;
 }
 
-int GameMainModel::getTimeLeft() const
+float GameMainModel::getTimeLeft() const
 {
-	return ceilf(_timeLeft);
+	return _timeLeft;
+}
+
+float GameMainModel::getChainPoints() const
+{
+	return _chainPoints * 100.0f / CHAIN_POINTS_THRESHOLD;
 }
 
 

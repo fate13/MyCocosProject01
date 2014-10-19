@@ -20,24 +20,24 @@
             <key>GameTitleScene_core.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1190,2},{148,148}}</string>
+                <string>{{495,1588},{149,149}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{148,148}}</string>
+                <string>{{0,0},{149,149}}</string>
                 <key>sourceSize</key>
-                <string>{148,148}</string>
+                <string>{149,149}</string>
             </dict>
             <key>GameTitleScene_fin.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1033,2},{136,137}}</string>
+                <string>{{646,1588},{136,137}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{136,137}}</string>
                 <key>sourceSize</key>
@@ -46,59 +46,59 @@
             <key>GameTitleScene_howtoButton_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1142},{353,187}}</string>
+                <string>{{2,1142},{328,161}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{353,187}}</string>
+                <string>{{0,0},{328,161}}</string>
                 <key>sourceSize</key>
-                <string>{353,187}</string>
+                <string>{328,161}</string>
             </dict>
             <key>GameTitleScene_howtoButton_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{571,1431},{259,75}}</string>
+                <string>{{449,1748},{258,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{259,75}}</string>
+                <string>{{0,0},{258,74}}</string>
                 <key>sourceSize</key>
-                <string>{259,75}</string>
+                <string>{258,74}</string>
             </dict>
             <key>GameTitleScene_howtoButton_touched.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1497},{353,187}}</string>
+                <string>{{2,1472},{328,161}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{353,187}}</string>
+                <string>{{0,0},{328,161}}</string>
                 <key>sourceSize</key>
-                <string>{353,187}</string>
+                <string>{328,161}</string>
             </dict>
             <key>GameTitleScene_playButton_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{380,1142},{326,189}}</string>
+                <string>{{329,1142},{301,164}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{326,189}}</string>
+                <string>{{0,0},{301,164}}</string>
                 <key>sourceSize</key>
-                <string>{326,189}</string>
+                <string>{301,164}</string>
             </dict>
             <key>GameTitleScene_playButton_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{571,1142},{287,83}}</string>
+                <string>{{364,1748},{287,83}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,158 +111,158 @@
             <key>GameTitleScene_playButton_touched.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{380,1470},{326,189}}</string>
+                <string>{{329,1445},{301,164}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{326,189}}</string>
+                <string>{{0,0},{301,164}}</string>
                 <key>sourceSize</key>
-                <string>{326,189}</string>
+                <string>{301,164}</string>
             </dict>
             <key>GameTitleScene_scoreButton_normal.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{191,1142},{348,187}}</string>
+                <string>{{165,1142},{324,162}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{348,187}}</string>
+                <string>{{0,0},{324,162}}</string>
                 <key>sourceSize</key>
-                <string>{348,187}</string>
+                <string>{324,162}</string>
             </dict>
             <key>GameTitleScene_scoreButton_selected.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{571,1692},{259,75}}</string>
+                <string>{{495,1142},{258,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{259,75}}</string>
+                <string>{{0,0},{258,74}}</string>
                 <key>sourceSize</key>
-                <string>{259,75}</string>
+                <string>{258,74}</string>
             </dict>
             <key>GameTitleScene_scoreButton_touched.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{191,1492},{348,187}}</string>
+                <string>{{165,1468},{324,162}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{348,187}}</string>
+                <string>{{0,0},{324,162}}</string>
                 <key>sourceSize</key>
-                <string>{348,187}</string>
+                <string>{324,162}</string>
             </dict>
             <key>GameTitleScene_title_a.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{840,1642},{204,191}}</string>
+                <string>{{663,1327},{179,165}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{204,191}}</string>
+                <string>{{0,0},{179,165}}</string>
                 <key>sourceSize</key>
-                <string>{204,191}</string>
+                <string>{179,165}</string>
             </dict>
             <key>GameTitleScene_title_d.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1852},{211,192}}</string>
+                <string>{{495,1402},{184,166}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{211,192}}</string>
+                <string>{{0,0},{184,166}}</string>
                 <key>sourceSize</key>
-                <string>{211,192}</string>
+                <string>{184,166}</string>
             </dict>
             <key>GameTitleScene_title_h.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{840,1848},{198,189}}</string>
+                <string>{{693,1727},{171,164}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{198,189}}</string>
+                <string>{{0,0},{171,164}}</string>
                 <key>sourceSize</key>
-                <string>{198,189}</string>
+                <string>{171,164}</string>
             </dict>
             <key>GameTitleScene_title_i.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1031,1848},{157,189}}</string>
+                <string>{{693,1900},{134,164}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{157,189}}</string>
+                <string>{{0,0},{134,164}}</string>
                 <key>sourceSize</key>
-                <string>{157,189}</string>
+                <string>{134,164}</string>
             </dict>
             <key>GameTitleScene_title_la.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{215,1842},{223,204}}</string>
+                <string>{{2,1802},{196,179}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{223,204}}</string>
+                <string>{{0,0},{196,179}}</string>
                 <key>sourceSize</key>
-                <string>{223,204}</string>
+                <string>{196,179}</string>
             </dict>
             <key>GameTitleScene_title_lv.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{440,1798},{223,204}}</string>
+                <string>{{183,1794},{196,179}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{223,204}}</string>
+                <string>{{0,0},{196,179}}</string>
                 <key>sourceSize</key>
-                <string>{223,204}</string>
+                <string>{196,179}</string>
             </dict>
             <key>GameTitleScene_title_n.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{648,1431},{209,191}}</string>
+                <string>{{571,1142},{183,165}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{209,191}}</string>
+                <string>{{0,0},{183,165}}</string>
                 <key>sourceSize</key>
-                <string>{209,191}</string>
+                <string>{183,165}</string>
             </dict>
             <key>GameTitleScene_title_s.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{646,1769},{206,192}}</string>
+                <string>{{525,1739},{180,166}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{206,192}}</string>
+                <string>{{0,0},{180,166}}</string>
                 <key>sourceSize</key>
-                <string>{206,192}</string>
+                <string>{180,166}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -274,7 +274,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:12a171a46157833d8acced20c93831ed:2e27786ae212ced5354d2b351d536bde:7d72b15b61b170886791a30422e12fc2$</string>
+            <string>$TexturePacker:SmartUpdate:3138a8c6ab29f902234f5f9f375c9f2f:43f7042c5cf30e6df9d162e7b192ade4:7d72b15b61b170886791a30422e12fc2$</string>
             <key>textureFileName</key>
             <string>GameTitleScene.png</string>
         </dict>

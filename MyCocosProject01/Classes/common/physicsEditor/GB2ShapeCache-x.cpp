@@ -120,63 +120,58 @@ cocos2d::Point GB2ShapeCache::anchorPointForShape(const std::string &shape) {
 }
 
 void GB2ShapeCache::addShapesWithFile(const std::string &plist) {
+
+	ValueMap dict = FileUtils::getInstance()->getValueMapFromFile(plist);
+
+    CCAssert(dict.size() != 0, "plist file empty or not existing");
     
-    auto dict = Dictionary::createWithContentsOfFileThreadSafe(plist.c_str());
-    CCAssert(dict != nullptr, "Shape-file not found"); // not triggered - cocos2dx delivers empty dict if non was found
-    CCAssert(dict->count() != 0, "plist file empty or not existing");
-    
-    auto metadataDict = (Dictionary*)dict->objectForKey("metadata");
-    auto format = static_cast<String*>(metadataDict->objectForKey("format"))->intValue();
-    ptmRatio = static_cast<String*>(metadataDict->objectForKey("ptm_ratio"))->floatValue();
+    ValueMap metadataDict = dict.at("metadata").asValueMap();
+    int format = metadataDict.at("format").asInt();
+    ptmRatio = metadataDict.at("ptm_ratio").asFloat();
     CCAssert(format == 1, "Format not supported");
     
-    auto bodyDict = (Dictionary*)dict->objectForKey("bodies");
+    ValueMap bodyDict = dict.at("bodies").asValueMap();
     
     b2Vec2 vertices[b2_maxPolygonVertices];
-    
-    DictElement* pElement = nullptr;
-    CCDICT_FOREACH(bodyDict, pElement)
-    {
+
+	for (std::pair<std::string, Value> element : bodyDict)
+	{
         auto bodyDef = new BodyDef();
         
-        auto bodyName = ccs(pElement->getStrKey());
+        std::string bodyName = element.first;
         
-        auto bodyData = (Dictionary*)pElement->getObject();
-        bodyDef->anchorPoint = PointFromString(static_cast<String*>(bodyData->objectForKey("anchorpoint"))->getCString());
+        ValueMap bodyData = element.second.asValueMap();
+        bodyDef->anchorPoint = PointFromString(bodyData.at("anchorpoint").asString());
         
-        auto fixtureList = (Array*)bodyData->objectForKey("fixtures");
+        ValueVector fixtureList = bodyData.at("fixtures").asValueVector();
         auto nextFixtureDef = &(bodyDef->fixtures);
-        
-        Object* fixture = nullptr;
-        CCARRAY_FOREACH(fixtureList, fixture)
+
+        for(Value fixture : fixtureList)
         {
-            
             b2FixtureDef basicData;
-            auto fixtureData = (Dictionary*)fixture;
+            ValueMap fixtureData = fixture.asValueMap();
             int callbackData = 0;
             
-            basicData.filter.categoryBits = static_cast<String *>(fixtureData->objectForKey("filter_categoryBits"))->intValue();
-            basicData.filter.maskBits = static_cast<String *>(fixtureData->objectForKey("filter_maskBits"))->intValue();
-            basicData.filter.groupIndex = static_cast<String *>(fixtureData->objectForKey("filter_groupIndex"))->intValue();
-            basicData.friction = static_cast<String *>(fixtureData->objectForKey("friction"))->floatValue();
-            basicData.density = static_cast<String *>(fixtureData->objectForKey("density"))->floatValue();
-            basicData.restitution = static_cast<String *>(fixtureData->objectForKey("restitution"))->floatValue();
-            basicData.isSensor = (bool)static_cast<String *>(fixtureData->objectForKey("isSensor"))->intValue();
-            if(fixtureData->objectForKey("id")){
-                basicData.userData = static_cast<String *>(fixtureData->objectForKey("id"));
-                callbackData = static_cast<String *>(fixtureData->objectForKey("id"))->intValue();
+            basicData.filter.categoryBits = fixtureData.at("filter_categoryBits").asInt();
+            basicData.filter.maskBits = fixtureData.at("filter_maskBits").asInt();
+            basicData.filter.groupIndex = fixtureData.at("filter_groupIndex").asInt();
+            basicData.friction = fixtureData.at("friction").asFloat();
+            basicData.density = fixtureData.at("density").asFloat();
+            basicData.restitution = fixtureData.at("restitution").asFloat();
+            basicData.isSensor = fixtureData.at("isSensor").asBool();
+            if(fixtureData.at("id").asString() != ""){
+				std::string userData = fixtureData.at("id").asString();
+                basicData.userData = &userData;
+                callbackData = fixtureData.at("id").asInt();
             }
             
-            std::string fixtureType = static_cast<String *>(fixtureData->objectForKey("fixture_type"))->getCString();
-            //String *fixtureType = static_cast<String *>(fixtureData->objectForKey("fixture_type"))->getCString();
+            std::string fixtureType = fixtureData.at("fixture_type").asString();
             
             if (fixtureType == "POLYGON") {
-                //CCDictionary *polygons = (CCDictionary *)fixtureData->objectForKey("polygons");
-                auto polygons = (Array *)fixtureData->objectForKey("polygons");
-                //CCDictElement *polygon = nullptr;
-                Object *polygon = nullptr;
-                //CCDICT_FOREACH(polygons, polygon)
-                CCARRAY_FOREACH(polygons, polygon)
+
+				ValueVector polygons = fixtureData.at("polygons").asValueVector();
+
+				for(Value polygon : polygons)
                 {
                     auto fix = new FixtureDef();
                     fix->fixture = basicData; // copy basic data
@@ -184,20 +179,16 @@ void GB2ShapeCache::addShapesWithFile(const std::string &plist) {
                     
                     b2PolygonShape *polyshape = new b2PolygonShape();
                     int vindex = 0;
+
+                    ValueVector polygonData = polygon.asValueVector();
                     
-                    //CCDictionary *polygonData = (CCDictionary *)polygon->getObject();
-                    auto polygonData = (Array *)polygon;
-                    
-                    assert(polygonData->count() <= b2_maxPolygonVertices);
-                    
-                    //CCDictElement *offset = nullptr;
-                    Object *offset = nullptr;
-                    //CCDICT_FOREACH(polygonData, offset)
-                    CCARRAY_FOREACH(polygonData, offset)
+                    assert(polygonData.size() <= b2_maxPolygonVertices);
+
+                    for(Value offset : polygonData)
                     {
                         
-                        auto pStr = (String *)offset;
-                        auto p = PointFromString(pStr->getCString());
+						std::string pStr = offset.asString();
+                        auto p = PointFromString(pStr);
                         
                         vertices[vindex].x = (p.x / ptmRatio) ;
                         vertices[vindex].y = (p.y / ptmRatio) ;
@@ -217,12 +208,12 @@ void GB2ShapeCache::addShapesWithFile(const std::string &plist) {
                 fix->fixture = basicData; // copy basic data
                 fix->callbackData = callbackData;
                 
-                auto circleData = (Dictionary *)fixtureData->objectForKey("circle");
+                ValueMap circleData = fixtureData.at("circle").asValueMap();
                 
                 auto circleShape = new b2CircleShape();
                 
-                circleShape->m_radius = static_cast<String *>(circleData->objectForKey("radius"))->floatValue() / ptmRatio;
-                auto p = PointFromString(static_cast<String *>(circleData->objectForKey("position"))->getCString());
+                circleShape->m_radius = circleData.at("radius").asFloat() / ptmRatio;
+                auto p = PointFromString(circleData.at("position").asString());
                 circleShape->m_p = b2Vec2(p.x / ptmRatio, p.y / ptmRatio);
                 fix->fixture.shape = circleShape;
                 
@@ -235,7 +226,7 @@ void GB2ShapeCache::addShapesWithFile(const std::string &plist) {
             }
             
             // add the body element to the hash
-            shapeObjects[bodyName->getCString()] = bodyDef;
+            shapeObjects[bodyName] = bodyDef;
             
         }
         

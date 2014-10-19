@@ -192,19 +192,26 @@ void CustomPhysicsSprite::update(const float dt)
 //  ここでdrawをオーバライドして、Sprite::drawに処理がわたらないようにする。
 void CustomPhysicsSprite::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, uint32_t flags)
 {
-	if (this->_pB2Body->IsAwake())
+//	if (this->_pB2Body->IsAwake())
+//	{
+//		if (isDirty())
+//		{
+//			syncPhysicsTransform();
+//		}
+//		_quadCommand.init(_globalZOrder, _texture->getName(), getGLProgramState(), _blendFunc, &_quad, 1, _transform);
+//		renderer->addCommand(&_quadCommand);
+//	}
+//	else
+//	{
+//		extension::PhysicsSprite::draw(renderer, transform, flags);
+//	}
+	
+	if (isDirty())
 	{
-		if (isDirty())
-		{
-			syncPhysicsTransform();
-		}
-		_quadCommand.init(_globalZOrder, _texture->getName(), getGLProgramState(), _blendFunc, &_quad, 1, _transform);
-		renderer->addCommand(&_quadCommand);
+		syncPhysicsTransform();
 	}
-	else
-	{
-		extension::PhysicsSprite::draw(renderer, transform, flags);
-	}
+	_quadCommand.init(_globalZOrder, _texture->getName(), getGLProgramState(), _blendFunc, &_quad, 1, _transform);
+	renderer->addCommand(&_quadCommand);
 
 }
 
@@ -234,8 +241,11 @@ void CustomPhysicsSprite::syncPhysicsTransform() const
 		y += ((s * -_anchorPointInPoints.x * _scaleX) + (c * -_anchorPointInPoints.y * _scaleY));
 
 		// 追加
-		x = x * this->getParent()->getScaleX() + this->getParent()->getPositionX() + (this->getParent()->getContentSize().width - this->getParent()->getScaleX() * this->getParent()->getContentSize().width) / 2;
-		y = y * this->getParent()->getScaleY() + this->getParent()->getPositionY() + (this->getParent()->getContentSize().height - this->getParent()->getScaleY() * this->getParent()->getContentSize().height) / 2;
+		//x = x * this->getParent()->getScaleX() + this->getParent()->getPositionX() + (this->getParent()->getContentSize().width - this->getParent()->getScaleX() * this->getParent()->getContentSize().width) / 2;
+		//y = y * this->getParent()->getScaleY() + this->getParent()->getPositionY() + (this->getParent()->getContentSize().height - this->getParent()->getScaleY() * this->getParent()->getContentSize().height) / 2;
+
+		y += this->getParent()->getParent()->getParent()->getPositionY();
+
 	}
 
 	// Rot, Translate Matrix

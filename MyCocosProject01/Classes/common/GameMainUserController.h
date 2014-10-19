@@ -25,7 +25,6 @@ public:
 	void touchMoved(Touch* touch, Event* event, Node* obj);
 	void touchEnded(Touch* touch, Event* event, Node* obj);
 	void sendDtAndBalls(const float dt, const Vector<CustomPhysicsSprite*> ballList);
-	void setCompleteVanishAnimation();
 
 	std::shared_ptr<GameMainModel> getModel() const;
 

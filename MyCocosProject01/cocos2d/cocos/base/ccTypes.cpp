@@ -253,4 +253,8 @@ const BlendFunc BlendFunc::ALPHA_PREMULTIPLIED = {GL_ONE, GL_ONE_MINUS_SRC_ALPHA
 const BlendFunc BlendFunc::ALPHA_NON_PREMULTIPLIED = {GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA};
 const BlendFunc BlendFunc::ADDITIVE = {GL_SRC_ALPHA, GL_ONE};
 
+// Sasaki Custom
+const BlendFunc BlendFunc::ADD = {GL_ONE, GL_ONE};
+const BlendFunc BlendFunc::SCREEN = {GL_ONE_MINUS_DST_COLOR, GL_ONE};
+
 NS_CC_END

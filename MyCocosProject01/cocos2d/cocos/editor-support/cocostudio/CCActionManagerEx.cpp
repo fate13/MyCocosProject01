@@ -76,7 +76,16 @@ void ActionManagerEx::initWithDictionary(const char* jsonName,const rapidjson::V
 	}
 	// Sasaki Custom
 	//_actionDic.insert(std::pair<std::string, cocos2d::Vector<ActionObject*>>(fileName, actionList));
-
+	if (_actionDic.count(fileName) != 0) {
+        int listCount = _actionDic.at(fileName).size();
+        for (int i = 0; i < listCount; i++) {
+            ActionObject* action = _actionDic.at(fileName).at(i);
+            if (action != nullptr) {
+                action->stop();
+            }
+        }
+        _actionDic.at(fileName).clear();
+	}
 	_actionDic[fileName] = actionList;
 }
     

@@ -343,6 +343,10 @@ struct BlendFunc
     //! Enables Additive blending. Uses {GL_SRC_ALPHA, GL_ONE}
     static const BlendFunc ADDITIVE;
 
+	//! Sasaki Custom. Uses {GL_ONE_MINUS_DST_COLOR, GL_ONE}
+	static const BlendFunc ADD;
+    static const BlendFunc SCREEN;
+
     bool operator==(const BlendFunc &a) const
     {
         return src == a.src && dst == a.dst;
